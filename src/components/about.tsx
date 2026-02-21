@@ -21,21 +21,22 @@ export const About = () => {
       <SectionHeading heading="About Me" />
       <div className="-mt-5 max-w-2xl text-center leading-7">
         <p className="mb-4">
-          I&apos;m Michał Skolak, I&apos;m a front-end developer from Poland.
-          I&apos;ve been learning programming for over 3 years. After I started
-          high school, I decided to pursue my passion for programming. My
-          favorite part of programming is the problem-solving aspect. I love the
-          feeling of finally figuring out a solution to a problem. I&apos;ve had
-          the opportunity to work on several exciting projects during my
-          learning journey, ranging from personal projects to collaborative
-          ventures. My core stack is React, Next.js, TypeScript, and Tailwind
-          CSS. I am also familiar with Nest.js and Prisma. I&apos;m always
-          looking to learn new technologies.
+          <strong>SUMMARY:</strong> 4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway ($2M monthly, {'<'}0.2% fraud); lead 4-engineer Agile squad.
         </p>
-        <p>
-          I&apos;m open to Job opportunities where I can contribute, learn and
-          grow. If you have a good opportunity that matches my skills and
-          experience then don&apos;t hesitate to contact me.
+        <p className="mb-4">
+          <strong>CORE TECHNOLOGIES:</strong> Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS, network hardening, anti-fraud ML
+        </p>
+        <p className="mb-4">
+          <strong>Cloud & DevOps:</strong> AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform
+        </p>
+        <p className="mb-4">
+          <strong>Languages:</strong> Java, TypeScript, JavaScript, Python, PHP
+        </p>
+        <p className="mb-4">
+          <strong>Location:</strong> Yaoundé, Cameroon | <strong>Phone:</strong> +237 691-958-707
+        </p>
+        <p className="mb-4">
+          <strong>Contact:</strong> <a href="mailto:pepis@pepis.world">pepis@pepis.world</a>
         </p>
       </div>
       <Skills />

@@ -28,33 +28,27 @@ const fadeInAnimationVariants = {
 };
 
 export const Project = ({ project, index }: TProps) => {
-  const { image, title, description, technologies, links } = project;
+  const { title, description, technologies, links } = project;
 
   return (
     <motion.div
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{
-        once: true,
-      }}
+      viewport={{ once: true }}
       custom={index}
-      className="flex flex-col rounded border p-5 md:w-1/2"
+      className="flex flex-col rounded border p-5 h-full"
     >
-      <Link
-        href={links.github}
-        aria-label={title}
-        target="_blank"
-        className="overflow-hidden rounded"
-      >
-        <Image
-          src={image}
-          alt={title}
-          height={390}
-          width={600}
-          className="rounded transition-transform hover:scale-105"
-        />
-      </Link>
+      {'github' in links && typeof links.github === 'string' && links.github ? (
+        <Link
+          href={links.github}
+          aria-label={title}
+          target="_blank"
+          className="overflow-hidden rounded"
+        >
+          <span className="font-bold text-blue-600 underline">GitHub</span>
+        </Link>
+      ) : null}
       <h3 className="mt-3 text-xl font-medium">{title}</h3>
       <p className="text-muted-foreground mb-2 mt-1">{description}</p>
       <div className="flex flex-wrap gap-2">

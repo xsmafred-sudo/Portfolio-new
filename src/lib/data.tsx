@@ -1,122 +1,109 @@
-import Link from 'next/link';
 
-import { buttonVariants } from '@/components/button';
-import { Icons } from '@/components/icons';
-import { cn } from '@/lib/utils';
-
+// --- Resume Data for Mouil Prosper ---
 export const links = [
-  {
-    name: 'Home',
-    hash: '#home',
-  },
-  {
-    name: 'About',
-    hash: '#about',
-  },
-  {
-    name: 'Experience',
-    hash: '#experience',
-  },
-  {
-    name: 'Projects',
-    hash: '#projects',
-  },
-  {
-    name: 'Contact',
-    hash: '#contact',
-  },
+  { name: 'Home', hash: '#home' },
+  { name: 'About', hash: '#about' },
+  { name: 'Experience', hash: '#experience' },
+  { name: 'Projects', hash: '#projects' },
+  { name: 'Contact', hash: '#contact' },
 ] as const;
 
 export const projectsData = [
   {
-    image: '/images/project-2.webp',
-    title: 'Next-starter',
-    description:
-      'A Next.js starter template, packed with features like TypeScript, Tailwind CSS, Next-auth, Eslint, Stripe, testing tools and more.',
-    technologies: ['Next.js', 'Tailwind', 'Shadcn/ui', 'Next-auth', 'Prisma'],
+    title: 'Tasky',
+    description: 'Multi-tenant task manager. Dockerised containers deployed to VPS with auto-SSL.',
+    technologies: ['Java', 'Spring Boot', 'Angular', 'JWT', 'Docker', 'GitHub Actions', 'VPS'],
     links: {
-      preview: 'https://next-starter-skolaczk.vercel.app',
-      github: 'https://github.com/Skolaczk/next-starter',
-      githubApi: 'https://api.github.com/repos/Skolaczk/next-starter',
+      github: 'https://github.com/yourhandle/tasky',
+      preview: '',
     },
   },
   {
-    image: '/images/project-1.webp',
-    title: 'SocialHub',
-    description:
-      'SocialHub is a next-generation social media app developed using Next.js and Nest.js.',
-    technologies: ['Next.js', 'TypeScript', ' Nest.js', 'Tailwind', 'Prisma'],
-    links: {
-      preview: 'https://socialhub-ms.vercel.app/',
-      github: 'https://github.com/Skolaczk/SocialHub',
-      githubApi: 'https://api.github.com/repos/Skolaczk/SocialHub',
-    },
+    title: 'Prellia',
+    description: 'Crypto payment gateway. Processes BTC, ETH, USDT; integrated 3 exchanges; fraud rate < 0.2 %.',
+    technologies: ['Node.js', 'TypeScript', 'PostgreSQL', 'AWS Lambda', 'anti-fraud ML'],
+    links: {},
+  },
+  {
+    title: 'AI Social Media Manager',
+    description: 'Auto-generates and schedules posts; reduces content-team workload 60 %.',
+    technologies: ['Python', 'Node.js', 'React', 'OpenAI API', 'Deepseek', 'Mistral AI', 'Cron', 'Docker'],
+    links: {},
+  },
+  {
+    title: 'Bahinlink',
+    description: 'Security-management platform. Manages security operations, agent tracking, and client communications.',
+    technologies: ['Next.js', 'TypeScript', 'Supabase'],
+    links: {},
+  },
+  {
+    title: 'E-commerce Platform',
+    description: 'Custom online-payment integration.',
+    technologies: [],
+    links: {},
+  },
+  {
+    title: 'M0DE (ongoing)',
+    description: 'AI-curated shopping. Conversational storefront + fully automated backend.',
+    technologies: [],
+    links: {},
   },
 ] as const;
 
 export const experiencesData = [
   {
-    title: 'Web developer intern',
-    company: 'WEB-BOX, Tarnobrzeg PL',
-    description:
-      'During this internship, I focused on two key areas: creating Wordpress plugins and managing website content, plugins, and settings.',
-    period: '2023',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Wordpress'],
+    title: 'Full-Stack Developer',
+    company: 'Stevo Digital',
+    description: 'Shipped 5 major features per 6-week sprint (Spring Boot + Angular/React). Reduced deployment time 35 % by moving GCP workloads to Coolify CI/CD. Built REST micro-services serving 1 M+ monthly calls at 99.9 % uptime. Boosted user-engagement 18 % via Hotjar-driven UI/UX iterations.',
+    period: '2023 – 2025',
+    technologies: ['Spring Boot', 'Angular', 'React', 'GCP', 'Coolify', 'Hotjar'],
   },
   {
-    title: 'Frontend developer & UI designer',
-    company: 'Freelancing, remote',
-    description:
-      'As a freelancer, I specialized in graphic design using Figma and website development using Next.js with Sanity CMS. I undertook projects independently, from design conceptualization to final implementation, ensuring client satisfaction.',
-    period: '2023 - 2024',
-    technologies: ['Next.js', 'TypeScript', 'Sanity CMS', 'Tailwind'],
-  },
-  {
-    title: 'Frontend developer intern',
-    company: 'Chop-chop, remote',
-    description:
-      'During my internship at Chop-Chop, I collaborated with an experienced IT team, focusing on tasks in Next.js. This experience provided valuable insights into teamwork and advanced my proficiency in Next.js.',
-    period: '2024',
-    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
-  },
-  {
-    title: 'Frontend developer & UI designer',
-    company: 'GeoScan, remote',
-    description: (
-      <>
-        At GeoScan, I collaborate with frontend, backend, and GIS specialists to
-        build{' '}
-        <Link
-          className={cn(
-            buttonVariants({ variant: 'link' }),
-            'm-0 h-fit p-0 text-base'
-          )}
-          href="https://geoscan-app.com"
-          target="_blank"
-        >
-          geoscan-app.com
-        </Link>{' '}
-        — a platform for generating real estate reports. I’m responsible for
-        developing and maintaining the frontend, as well as designing UI/UX to
-        ensure a clear and intuitive user experience.
-      </>
-    ),
-    period: '2024 - present',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind', 'Supabase', 'Leaflet'],
+    title: 'Software Engineer & IT Support',
+    company: 'Micro QQ Tech',
+    description: 'Designed Laravel CMS for maternity records; accelerated data retrieval 40 %. Administered Ubuntu VPS & PostgreSQL; zero security incidents. Mentored 4 junior devs on Git flow, code reviews, unit testing. Rolled out campus-wide upgrades for 75+ workstations.',
+    period: '2022 – 2023',
+    technologies: ['Laravel', 'Ubuntu', 'PostgreSQL', 'Git', 'Unit Testing'],
   },
 ] as const;
 
 export const skillsData = [
-  { icon: <Icons.html className="size-12" /> },
-  { icon: <Icons.css className="size-12" /> },
-  { icon: <Icons.sass className="size-12" /> },
-  { icon: <Icons.tailwind className="size-12" /> },
-  { icon: <Icons.javascript className="size-12" /> },
-  { icon: <Icons.typescript className="size-12" /> },
-  { icon: <Icons.react className="size-12" /> },
-  { icon: <Icons.redux className="size-12" /> },
-  { icon: <Icons.nextjs className="size-12" /> },
-  { icon: <Icons.nestjs className="size-12" /> },
-  { icon: <Icons.prisma className="size-12" /> },
-  { icon: <Icons.docker className="size-12" /> },
+  { label: 'Java' },
+  { label: 'TypeScript' },
+  { label: 'JavaScript' },
+  { label: 'Python' },
+  { label: 'PHP' },
+  { label: 'Spring Boot' },
+  { label: 'Hibernate' },
+  { label: 'Angular' },
+  { label: 'React' },
+  { label: 'Next.js' },
+  { label: 'Node.js' },
+  { label: 'Laravel' },
+  { label: 'AWS' },
+  { label: 'GCP' },
+  { label: 'Docker' },
+  { label: 'Vercel' },
+  { label: 'Coolify' },
+  { label: 'GitHub Actions' },
+  { label: 'Terraform' },
+  { label: 'PostgreSQL' },
+  { label: 'MySQL' },
+  { label: 'MongoDB' },
+  { label: 'Supabase' },
+  { label: 'REST' },
+  { label: 'JSON' },
+  { label: 'JWT' },
+  { label: 'OAuth2' },
+  { label: 'WebSocket' },
+  { label: 'gRPC' },
+  { label: 'GraphQL' },
+  { label: 'OWASP Top-10' },
+  { label: 'SSL/TLS' },
+  { label: 'network hardening' },
+  { label: 'anti-fraud ML' },
+  { label: 'English (Fluent)' },
+  { label: 'French (Fluent)' },
 ] as const;
+
+
