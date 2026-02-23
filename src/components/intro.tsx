@@ -5,10 +5,12 @@ import Link from 'next/link';
 
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
+import { useDictionary } from '@/hooks/use-dictionary';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 
 export const Intro = () => {
   const { ref } = useSectionInView('Home');
+  const dict = useDictionary();
 
   return (
     <section
@@ -29,7 +31,7 @@ export const Intro = () => {
             <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
             <span className="relative flex size-2 rounded-full bg-green-400"></span>
           </span>
-          <span className="font-mono text-sm">Available for work!</span>
+          <span className="font-mono text-sm">{dict.hero.available}</span>
         </Link>
       </motion.div>
       <motion.h1
@@ -37,7 +39,10 @@ export const Intro = () => {
         animate={{ opacity: 1, y: 0 }}
         className="font-heading max-w-3xl text-4xl font-extrabold md:text-5xl"
       >
-        Mouil Prosper — <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">Full-Stack Engineer</span>
+        {dict.hero.name} —{' '}
+        <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
+          {dict.hero.title}
+        </span>
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
@@ -45,7 +50,7 @@ export const Intro = () => {
         transition={{ delay: 0.1 }}
         className="text-muted-foreground max-w-xl"
       >
-        4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway ($2M monthly, {'<'}0.2% fraud); lead 4-engineer Agile squad. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.
+        {dict.hero.subtitle}
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -55,7 +60,7 @@ export const Intro = () => {
       >
         <Button asChild size="lg">
           <Link href="#contact">
-            Get in touch <Icons.arrowRight className="ml-2 size-4" />
+            {dict.contact.email} <Icons.arrowRight className="ml-2 size-4" />
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>
@@ -77,17 +82,13 @@ export const Intro = () => {
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>
-          <Link
-            href="https://pepis.world"
-            aria-label="Website"
-            target="_blank"
-          >
+          <Link href="https://pepis.world" aria-label="Website" target="_blank">
             <span className="font-bold text-lg">🌐</span>
           </Link>
         </Button>
       </motion.div>
       <div className="mt-4 text-sm text-muted-foreground">
-        <span>Yaoundé, Cameroon | +237 691-958-707</span>
+        <span>{dict.hero.location}</span>
       </div>
     </section>
   );

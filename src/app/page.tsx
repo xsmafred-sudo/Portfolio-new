@@ -4,10 +4,13 @@ import { Experience } from '@/components/experience';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Intro } from '@/components/intro';
+import { LanguageSwitcher } from '@/components/language-switcher';
 import { Projects } from '@/components/projects';
 import { SectionDivider } from '@/components/section-divider';
+import { Services } from '@/components/services';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { FlickeringFooter } from '@/components/ui/flickering-footer';
+
 const HomePage = async () => {
   return (
     <>
@@ -15,13 +18,17 @@ const HomePage = async () => {
         <Header />
         <Intro />
         <SectionDivider />
+        <Services />
         <About />
         <Experience />
         <Projects />
         <Contact />
         <FlickeringFooter />
       </div>
-      <ThemeToggle className="bg-background hidden sm:fixed sm:bottom-8 sm:right-8 sm:flex" />
+      <div className="fixed bottom-8 right-8 z-50 hidden sm:flex gap-2">
+        <LanguageSwitcher />
+        <ThemeToggle />
+      </div>
     </>
   );
 };

@@ -5,12 +5,14 @@ import { motion } from 'framer-motion';
 
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
+import { useDictionary } from '@/hooks/use-dictionary';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 import { experiencesData } from '@/lib/data';
 import { cn } from '@/lib/utils';
 
 export const Experience = () => {
   const { ref: sectionRef } = useSectionInView('Experience');
+  const dict = useDictionary();
 
   return (
     <section
@@ -19,24 +21,37 @@ export const Experience = () => {
       className="my-10 scroll-mt-28 md:mb-20"
     >
       <SectionHeading
-        heading="Experience"
-        content="Professional experience from Mouil Prosper's resume."
+        heading={dict.experience.title}
+        content={dict.experience.subtitle}
       />
       <div className="relative max-w-screen-md">
         {[
           {
-            title: 'Full-Stack Developer',
-            company: 'Stevo Digital',
-            period: '2023 – 2025',
-            description: 'Shipped 5 major features per 6-week sprint (Spring Boot + Angular/React). Reduced deployment time 35 % by moving GCP workloads to Coolify CI/CD. Built REST micro-services serving 1 M+ monthly calls at 99.9 % uptime. Boosted user-engagement 18 % via Hotjar-driven UI/UX iterations.',
-            technologies: ['Spring Boot', 'Angular', 'React', 'GCP', 'Coolify', 'Hotjar'],
+            title: dict.experience.stevo.role,
+            company: dict.experience.stevo.company,
+            period: dict.experience.stevo.period,
+            description: dict.experience.stevo.description,
+            technologies: [
+              'Spring Boot',
+              'Angular',
+              'React',
+              'GCP',
+              'Coolify',
+              'Hotjar',
+            ],
           },
           {
-            title: 'Software Engineer & IT Support',
-            company: 'Micro QQ Tech',
-            period: '2022 – 2023',
-            description: 'Designed Laravel CMS for maternity records; accelerated data retrieval 40 %. Administered Ubuntu VPS & PostgreSQL; zero security incidents. Mentored 4 junior devs on Git flow, code reviews, unit testing. Rolled out campus-wide upgrades for 75+ workstations.',
-            technologies: ['Laravel', 'Ubuntu', 'PostgreSQL', 'Git', 'Unit Testing'],
+            title: dict.experience.microqq.role,
+            company: dict.experience.microqq.company,
+            period: dict.experience.microqq.period,
+            description: dict.experience.microqq.description,
+            technologies: [
+              'Laravel',
+              'Ubuntu',
+              'PostgreSQL',
+              'Git',
+              'Unit Testing',
+            ],
           },
         ].map(({ title, description, company, period, technologies }) => (
           <div

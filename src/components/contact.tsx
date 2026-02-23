@@ -10,12 +10,14 @@ import { sendEmailAction } from '@/actions/send-email';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
+import { useDictionary } from '@/hooks/use-dictionary';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 import { formSchema, TFormSchema } from '@/lib/form-schema';
 import { cn } from '@/lib/utils';
 
 export const Contact = () => {
   const { ref } = useSectionInView('Contact');
+  const dict = useDictionary();
   const {
     register,
     handleSubmit,
@@ -54,22 +56,8 @@ export const Contact = () => {
       }}
     >
       <SectionHeading
-        heading="Get In Touch"
-        content={
-          <>
-            Please contact me directly at{' '}
-            <Button
-              variant="link"
-              className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"
-              asChild
-            >
-              <Link href="mailto:xsmafred@gmail.com">
-                xsmafred@gmail.com
-              </Link>
-            </Button>{' '}
-            or through this form.
-          </>
-        }
+        heading={dict.contact.title}
+        content={<>{dict.contact.subtitle}</>}
       />
       <form
         onSubmit={handleSubmit(onSubmit)}

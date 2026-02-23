@@ -1,6 +1,5 @@
 ## 🎉 Project Overview
-
-My personal portfolio website built using Next.js, shadcn ui , Tailwind CSS and Framer-motion .
+My personal portfolio website built using Next.js, Tailwind CSS and Framer-motion.
 
 ## 📍 Live
 

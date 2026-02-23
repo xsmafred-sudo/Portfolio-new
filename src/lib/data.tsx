@@ -1,7 +1,7 @@
-
 // --- Resume Data for Mouil Prosper ---
 export const links = [
   { name: 'Home', hash: '#home' },
+  { name: 'Services', hash: '#services' },
   { name: 'About', hash: '#about' },
   { name: 'Experience', hash: '#experience' },
   { name: 'Projects', hash: '#projects' },
@@ -11,8 +11,17 @@ export const links = [
 export const projectsData = [
   {
     title: 'Tasky',
-    description: 'Multi-tenant task manager. Dockerised containers deployed to VPS with auto-SSL.',
-    technologies: ['Java', 'Spring Boot', 'Angular', 'JWT', 'Docker', 'GitHub Actions', 'VPS'],
+    description:
+      'Multi-tenant task manager. Dockerised containers deployed to VPS with auto-SSL.',
+    technologies: [
+      'Java',
+      'Spring Boot',
+      'Angular',
+      'JWT',
+      'Docker',
+      'GitHub Actions',
+      'VPS',
+    ],
     links: {
       github: 'https://github.com/yourhandle/tasky',
       preview: '',
@@ -20,19 +29,37 @@ export const projectsData = [
   },
   {
     title: 'Prellia',
-    description: 'Crypto payment gateway. Processes BTC, ETH, USDT; integrated 3 exchanges; fraud rate < 0.2 %.',
-    technologies: ['Node.js', 'TypeScript', 'PostgreSQL', 'AWS Lambda', 'anti-fraud ML'],
+    description:
+      'Crypto payment gateway. Processes BTC, ETH, USDT; integrated 3 exchanges; fraud rate < 0.2 %.',
+    technologies: [
+      'Node.js',
+      'TypeScript',
+      'PostgreSQL',
+      'AWS Lambda',
+      'anti-fraud ML',
+    ],
     links: {},
   },
   {
     title: 'AI Social Media Manager',
-    description: 'Auto-generates and schedules posts; reduces content-team workload 60 %.',
-    technologies: ['Python', 'Node.js', 'React', 'OpenAI API', 'Deepseek', 'Mistral AI', 'Cron', 'Docker'],
+    description:
+      'Auto-generates and schedules posts; reduces content-team workload 60 %.',
+    technologies: [
+      'Python',
+      'Node.js',
+      'React',
+      'OpenAI API',
+      'Deepseek',
+      'Mistral AI',
+      'Cron',
+      'Docker',
+    ],
     links: {},
   },
   {
     title: 'Bahinlink',
-    description: 'Security-management platform. Manages security operations, agent tracking, and client communications.',
+    description:
+      'Security-management platform. Manages security operations, agent tracking, and client communications.',
     technologies: ['Next.js', 'TypeScript', 'Supabase'],
     links: {},
   },
@@ -44,7 +71,8 @@ export const projectsData = [
   },
   {
     title: 'M0DE (ongoing)',
-    description: 'AI-curated shopping. Conversational storefront + fully automated backend.',
+    description:
+      'AI-curated shopping. Conversational storefront + fully automated backend.',
     technologies: [],
     links: {},
   },
@@ -54,14 +82,23 @@ export const experiencesData = [
   {
     title: 'Full-Stack Developer',
     company: 'Stevo Digital',
-    description: 'Shipped 5 major features per 6-week sprint (Spring Boot + Angular/React). Reduced deployment time 35 % by moving GCP workloads to Coolify CI/CD. Built REST micro-services serving 1 M+ monthly calls at 99.9 % uptime. Boosted user-engagement 18 % via Hotjar-driven UI/UX iterations.',
+    description:
+      'Shipped 5 major features per 6-week sprint (Spring Boot + Angular/React). Reduced deployment time 35 % by moving GCP workloads to Coolify CI/CD. Built REST micro-services serving 1 M+ monthly calls at 99.9 % uptime. Boosted user-engagement 18 % via Hotjar-driven UI/UX iterations.',
     period: '2023 – 2025',
-    technologies: ['Spring Boot', 'Angular', 'React', 'GCP', 'Coolify', 'Hotjar'],
+    technologies: [
+      'Spring Boot',
+      'Angular',
+      'React',
+      'GCP',
+      'Coolify',
+      'Hotjar',
+    ],
   },
   {
     title: 'Software Engineer & IT Support',
     company: 'Micro QQ Tech',
-    description: 'Designed Laravel CMS for maternity records; accelerated data retrieval 40 %. Administered Ubuntu VPS & PostgreSQL; zero security incidents. Mentored 4 junior devs on Git flow, code reviews, unit testing. Rolled out campus-wide upgrades for 75+ workstations.',
+    description:
+      'Designed Laravel CMS for maternity records; accelerated data retrieval 40 %. Administered Ubuntu VPS & PostgreSQL; zero security incidents. Mentored 4 junior devs on Git flow, code reviews, unit testing. Rolled out campus-wide upgrades for 75+ workstations.',
     period: '2022 – 2023',
     technologies: ['Laravel', 'Ubuntu', 'PostgreSQL', 'Git', 'Unit Testing'],
   },
@@ -105,5 +142,3 @@ export const skillsData = [
   { label: 'English (Fluent)' },
   { label: 'French (Fluent)' },
 ] as const;
-
-

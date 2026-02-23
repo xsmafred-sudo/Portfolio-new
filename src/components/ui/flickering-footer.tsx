@@ -672,7 +672,7 @@ export const FlickeringFooter = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-background z-10 from-40%" />
         <div className="absolute inset-0 mx-6">
           <FlickeringGrid
-            text={tablet ? "Footer" : "Prosper your workflow"}
+            text={tablet ? "Prosper" : "Prosper your workflow"}
             fontSize={tablet ? 70 : 90}
             className="h-full w-full"
             squareSize={2}

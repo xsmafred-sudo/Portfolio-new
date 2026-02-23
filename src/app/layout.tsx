@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
 import { ActiveSectionProvider } from '@/components/active-section-provider';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Providers } from '@/components/providers';
 import { Toaster } from '@/components/toaster';
 import { fonts } from '@/lib/fonts';
 import { siteConfig } from '@/lib/site-config';
@@ -112,12 +112,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
         />
       </head>
       <body className={cn('min-h-screen font-sans', fonts)}>
-        <ThemeProvider attribute="class">
+        <Providers>
           <ActiveSectionProvider>
             {children}
             <Toaster position="bottom-left" />
           </ActiveSectionProvider>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

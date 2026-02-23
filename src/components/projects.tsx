@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 
 import { Project } from '@/components/project';
 import { SectionHeading } from '@/components/section-heading';
+import { useDictionary } from '@/hooks/use-dictionary';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 import { projectsData } from '@/lib/data';
 
 export const Projects = () => {
-
+  const dict = useDictionary();
   const { ref } = useSectionInView('Projects');
 
   return (
@@ -20,8 +21,8 @@ export const Projects = () => {
         viewport={{ once: true }}
       >
         <SectionHeading
-          heading="Projects"
-          content="Selected projects from Mouil Prosper's resume."
+          heading={dict.projects.title}
+          content={dict.projects.subtitle}
         />
       </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
