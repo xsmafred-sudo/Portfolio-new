@@ -33,4 +33,4 @@ and open http://localhost:3000 to see this app.
 - React-hook-form
 - Resend
 
-If you encounter a problem, write to this e-mail address: [skolakmichal1@gmail.com](mailto:skolakmichal1@gmail.com)
+If you encounter a problem, write to this e-mail address: [xsmafred@gmail.com](mailto:xsmafred@gmail.com)

@@ -7,7 +7,7 @@ import { Intro } from '@/components/intro';
 import { Projects } from '@/components/projects';
 import { SectionDivider } from '@/components/section-divider';
 import { ThemeToggle } from '@/components/theme-toggle';
-
+import { FlickeringFooter } from '@/components/ui/flickering-footer';
 const HomePage = async () => {
   return (
     <>
@@ -19,7 +19,7 @@ const HomePage = async () => {
         <Experience />
         <Projects />
         <Contact />
-        <Footer />
+        <FlickeringFooter />
       </div>
       <ThemeToggle className="bg-background hidden sm:fixed sm:bottom-8 sm:right-8 sm:flex" />
     </>
