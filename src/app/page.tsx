@@ -1,4 +1,5 @@
 import { About } from '@/components/about';
+import { AmbientAI } from '@/components/ambient-ai';
 import { BookingSection } from '@/components/booking-section';
 import { Experience } from '@/components/experience';
 import { Footer } from '@/components/footer';
@@ -49,6 +50,7 @@ const HomePage = async () => {
         <GitHubSection />
         <BookingSection />
         <FlickeringFooter />
+        <AmbientAI />
       </div>
       <div className="fixed bottom-8 right-8 z-50 hidden sm:flex gap-2">
         <LanguageSwitcher />
