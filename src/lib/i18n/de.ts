@@ -5,6 +5,8 @@ export const de = {
     about: 'Über mich',
     experience: 'Erfahrung',
     projects: 'Projekte',
+    github: 'GitHub',
+    booking: 'Buchung',
     contact: 'Kontakt',
   },
   hero: {
@@ -13,7 +15,7 @@ export const de = {
     name: 'Mouil Prosper',
     subtitle:
       '4+ Jahre Entwicklung sicherer, cloud-nativer SaaS. PostgreSQL-Latenz um 40% für 3M-Datensätze reduziert; Crypto-Gateway gebaut (2M$ monatlich, <0.2% Betrug); geleitetes 4-köpfiges Agile-Team. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
-    location: 'Yaoundé, Kamerun | +237 691-958-707',
+    location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'Verfügbar für Arbeit!',
   },
   services: {
@@ -80,6 +82,46 @@ export const de = {
     subtitle: 'Ausgewählte Projekte von Mouil Prosper.',
     viewCode: 'Code ansehen',
     liveDemo: 'Live-Demo',
+    tasky: {
+      title: 'Tasky',
+      description:
+        'Multi-Tenant Aufgabenmanager. Dockerisierte Container auf VPS mit Auto-SSL bereitgestellt.',
+    },
+    prellia: {
+      title: 'Prellia',
+      description:
+        'Crypto-Zahlungsgateway. Verarbeitet BTC, ETH, USDT; 3 Börsen integriert; Betrugsrate < 0.2 %.',
+    },
+    aiSocialMedia: {
+      title: 'KI Social Media Manager',
+      description:
+        'Automatisch Beiträge generiert und plant; reduziert Arbeitsbelastung des Content-Teams um 60 %.',
+    },
+    bahinlink: {
+      title: 'Bahinlink',
+      description:
+        'Sicherheitsmanagement-Plattform. Verwaltet Sicherheitsoperationen, Agenten-Tracking und Kundenkommunikation.',
+    },
+    ecommerce: {
+      title: 'E-Commerce Plattform',
+      description: 'Benutzerdefinierte Online-Zahlungsintegration.',
+    },
+    mode: {
+      title: 'M0DE (laufend)',
+      description:
+        'KI-kuratierter Einkauf. Konversationeller Storefront + vollständig automatisierter Backend.',
+    },
+  },
+  github: {
+    title: 'GitHub Beiträge',
+    subtitle: 'Meine Beitragaktivität auf GitHub',
+    search: 'Suchen',
+    loading: 'Laden...',
+    placeholder: 'GitHub-Benutzername eingeben',
+  },
+  booking: {
+    title: 'Meeting Buchen',
+    subtitle: 'Lass uns über dein Projekt sprechen',
   },
   contact: {
     title: 'Kontakt',

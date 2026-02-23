@@ -5,6 +5,8 @@ export const zh = {
     about: '关于',
     experience: '经验',
     projects: '项目',
+    github: 'GitHub',
+    booking: '预约',
     contact: '联系',
   },
   hero: {
@@ -13,7 +15,7 @@ export const zh = {
     name: 'Mouil Prosper',
     subtitle:
       '4年以上构建安全的云原生SaaS。将3M行数据集的PostgreSQL延迟降低40%；构建加密支付网关（月交易额$200万，欺诈率<0.2%）；领导4人敏捷工程师团队。技术栈：Java 17、Spring Boot、Angular、React、TypeScript、AWS、GCP、Docker、CI/CD。',
-    location: '喀麦隆雅温得 | +237 691-958-707',
+    location: 'REMOTE, ONSITE | +237 691-958-707',
     available: '可以工作！',
   },
   services: {
@@ -78,6 +80,44 @@ export const zh = {
     subtitle: 'Mouil Prosper精选项目。',
     viewCode: '查看代码',
     liveDemo: '在线演示',
+    tasky: {
+      title: 'Tasky',
+      description: '多租户任务管理器。Docker容器部署到VPS，自动SSL。',
+    },
+    prellia: {
+      title: 'Prellia',
+      description:
+        '加密支付网关。处理BTC、ETH、USDT；集成3家交易所；欺诈率<0.2%。',
+    },
+    aiSocialMedia: {
+      title: 'AI社交媒体管理器',
+      description: '自动生成和安排帖子；将内容团队工作量减少60%。',
+    },
+    bahinlink: {
+      title: 'Bahinlink',
+      description: '安全管理平台。管理安全运营、代理跟踪和客户沟通。',
+    },
+    ecommerce: {
+      title: '电子商务平台',
+      description: '定制在线支付集成。',
+    },
+    mode: {
+      title: 'M0DE（进行中）',
+      description: 'AI策划购物。对话式 storefront + 全自动化后端。',
+    },
+  },
+  github: {
+    title: 'GitHub 贡献',
+    subtitle: '我的 GitHub 贡献活动',
+    search: '搜索',
+    loading: '加载中...',
+    placeholder: '输入 GitHub 用户名',
+  },
+  booking: {
+    title: '预约会议',
+    subtitle: '让我们讨论您的项目',
+    bookNow: '立即预约',
+    callDuration: '30分钟通话',
   },
   contact: {
     title: '联系我',

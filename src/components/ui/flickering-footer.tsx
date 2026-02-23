@@ -1,12 +1,20 @@
-"use client";
+'use client';
 
-import { ChevronRightIcon } from "@radix-ui/react-icons";
-import { ClassValue, clsx } from "clsx";
-import * as Color from "color-bits";
-import { motion } from "motion/react";
-import Link from "next/link";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { twMerge } from "tailwind-merge";
+import { ChevronRightIcon } from '@radix-ui/react-icons';
+import { ClassValue, clsx } from 'clsx';
+import * as Color from 'color-bits';
+import { motion } from 'motion/react';
+import Link from 'next/link';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+import { twMerge } from 'tailwind-merge';
+
+import { useDictionary } from '@/hooks/use-dictionary';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -14,16 +22,16 @@ export function cn(...inputs: ClassValue[]) {
 
 // Helper function to convert any CSS color to rgba
 export const getRGBA = (
-  cssColor: React.CSSProperties["color"],
-  fallback: string = "rgba(180, 180, 180)",
+  cssColor: React.CSSProperties['color'],
+  fallback: string = 'rgba(180, 180, 180)'
 ): string => {
-  if (typeof window === "undefined") return fallback;
+  if (typeof window === 'undefined') return fallback;
   if (!cssColor) return fallback;
 
   try {
     // Handle CSS variables
-    if (typeof cssColor === "string" && cssColor.startsWith("var(")) {
-      const element = document.createElement("div");
+    if (typeof cssColor === 'string' && cssColor.startsWith('var(')) {
+      const element = document.createElement('div');
       element.style.color = cssColor;
       document.body.appendChild(element);
       const computedColor = window.getComputedStyle(element).color;
@@ -33,14 +41,14 @@ export const getRGBA = (
 
     return Color.formatRGBA(Color.parse(cssColor));
   } catch (e) {
-    console.error("Color parsing failed:", e);
+    console.error('Color parsing failed:', e);
     return fallback;
   }
 };
 
 // Helper function to add opacity to an RGB color string
 export const colorWithOpacity = (color: string, opacity: number): string => {
-  if (!color.startsWith("rgb")) return color;
+  if (!color.startsWith('rgb')) return color;
   return Color.formatRGBA(Color.alpha(Color.parse(color), opacity));
 };
 
@@ -48,31 +56,31 @@ export const colorWithOpacity = (color: string, opacity: number): string => {
 
 export const focusInput = [
   // base
-  "focus:ring-2",
+  'focus:ring-2',
   // ring color
-  "focus:ring-blue-200 focus:dark:ring-blue-700/30",
+  'focus:ring-blue-200 focus:dark:ring-blue-700/30',
   // border color
-  "focus:border-blue-500 focus:dark:border-blue-700",
+  'focus:border-blue-500 focus:dark:border-blue-700',
 ];
 
 // Tremor Raw focusRing [v0.0.1]
 
 export const focusRing = [
   // base
-  "outline outline-offset-2 outline-0 focus-visible:outline-2",
+  'outline outline-offset-2 outline-0 focus-visible:outline-2',
   // outline color
-  "outline-blue-500 dark:outline-blue-500",
+  'outline-blue-500 dark:outline-blue-500',
 ];
 
 // Tremor Raw hasErrorInput [v0.0.1]
 
 export const hasErrorInput = [
   // base
-  "ring-2",
+  'ring-2',
   // border color
-  "border-red-500 dark:border-red-700",
+  'border-red-500 dark:border-red-700',
   // ring color
-  "ring-red-200 dark:ring-red-700/30",
+  'ring-red-200 dark:ring-red-700/30',
 ];
 
 export const Icons = {
@@ -83,7 +91,7 @@ export const Icons = {
       viewBox="0 0 42 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("size-4 fill-[var(--secondary)]", className)}
+      className={cn('size-4 fill-[var(--secondary)]', className)}
     >
       <g clipPath="url(#clip0_322_9172)">
         <path
@@ -109,7 +117,7 @@ export const Icons = {
       viewBox="0 0 46 45"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("size-4", className)}
+      className={cn('size-4', className)}
     >
       <g>
         <rect
@@ -180,7 +188,7 @@ export const Icons = {
       viewBox="0 0 46 45"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("size-4", className)}
+      className={cn('size-4', className)}
     >
       <g>
         <rect
@@ -375,12 +383,12 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   squareSize = 3,
   gridGap = 3,
   flickerChance = 0.2,
-  color = "#B4B4B4",
+  color = '#B4B4B4',
   width,
   height,
   className,
   maxOpacity = 0.15,
-  text = "",
+  text = '',
   fontSize = 140,
   fontWeight = 600,
   ...props
@@ -403,25 +411,25 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
       cols: number,
       rows: number,
       squares: Float32Array,
-      dpr: number,
+      dpr: number
     ) => {
       ctx.clearRect(0, 0, width, height);
 
       // Create a separate canvas for the text mask
-      const maskCanvas = document.createElement("canvas");
+      const maskCanvas = document.createElement('canvas');
       maskCanvas.width = width;
       maskCanvas.height = height;
-      const maskCtx = maskCanvas.getContext("2d", { willReadFrequently: true });
+      const maskCtx = maskCanvas.getContext('2d', { willReadFrequently: true });
       if (!maskCtx) return;
 
       // Draw text on mask canvas
       if (text) {
         maskCtx.save();
         maskCtx.scale(dpr, dpr);
-        maskCtx.fillStyle = "white";
+        maskCtx.fillStyle = 'white';
         maskCtx.font = `${fontWeight} ${fontSize}px "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
-        maskCtx.textAlign = "center";
-        maskCtx.textBaseline = "middle";
+        maskCtx.textAlign = 'center';
+        maskCtx.textBaseline = 'middle';
         maskCtx.fillText(text, width / (2 * dpr), height / (2 * dpr));
         maskCtx.restore();
       }
@@ -438,10 +446,10 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
             x,
             y,
             squareWidth,
-            squareHeight,
+            squareHeight
           ).data;
           const hasText = maskData.some(
-            (value, index) => index % 4 === 0 && value > 0,
+            (value, index) => index % 4 === 0 && value > 0
           );
 
           const opacity = squares[i * rows + j];
@@ -454,7 +462,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
         }
       }
     },
-    [memoizedColor, squareSize, gridGap, text, fontSize, fontWeight],
+    [memoizedColor, squareSize, gridGap, text, fontSize, fontWeight]
   );
 
   const setupCanvas = useCallback(
@@ -474,7 +482,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
 
       return { cols, rows, squares, dpr };
     },
-    [squareSize, gridGap, maxOpacity],
+    [squareSize, gridGap, maxOpacity]
   );
 
   const updateSquares = useCallback(
@@ -485,7 +493,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
         }
       }
     },
-    [flickerChance, maxOpacity],
+    [flickerChance, maxOpacity]
   );
 
   useEffect(() => {
@@ -493,7 +501,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     const container = containerRef.current;
     if (!canvas || !container) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     let animationFrameId: number;
@@ -523,7 +531,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
         gridParams.cols,
         gridParams.rows,
         gridParams.squares,
-        gridParams.dpr,
+        gridParams.dpr
       );
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -538,7 +546,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0 },
+      { threshold: 0 }
     );
 
     intersectionObserver.observe(canvas);
@@ -586,16 +594,16 @@ export function useMediaQuery(query: string) {
     checkQuery();
 
     // Add resize listener
-    window.addEventListener("resize", checkQuery);
+    window.addEventListener('resize', checkQuery);
 
     // Add media query change listener
     const mediaQuery = window.matchMedia(query);
-    mediaQuery.addEventListener("change", checkQuery);
+    mediaQuery.addEventListener('change', checkQuery);
 
     // Cleanup
     return () => {
-      window.removeEventListener("resize", checkQuery);
-      mediaQuery.removeEventListener("change", checkQuery);
+      window.removeEventListener('resize', checkQuery);
+      mediaQuery.removeEventListener('change', checkQuery);
     };
   }, [query]);
 
@@ -612,8 +620,8 @@ export const Highlight = ({
   return (
     <span
       className={cn(
-        "p-1 py-0.5 font-medium dark:font-semibold text-secondary",
-        className,
+        'p-1 py-0.5 font-medium dark:font-semibold text-secondary',
+        className
       )}
     >
       {children}
@@ -626,19 +634,19 @@ export const BLUR_FADE_DELAY = 0.15;
 export const siteConfig = {
   hero: {
     badgeIcon: null,
-    title: "Navigation",
-    description: "Home | About | Experience | Projects | Contact",
+    title: 'Navigation',
+    description: 'Home | About | Experience | Projects | Contact',
     cta: {},
   },
   footerLinks: [
     {
-      title: "Navigation",
+      title: 'Navigation',
       links: [
-        { id: 1, title: "Home", url: "#home" },
-        { id: 2, title: "About", url: "#about" },
-        { id: 3, title: "Experience", url: "#experience" },
-        { id: 4, title: "Projects", url: "#projects" },
-        { id: 5, title: "Contact", url: "#contact" },
+        { id: 1, title: 'Home', url: '#home' },
+        { id: 2, title: 'About', url: '#about' },
+        { id: 3, title: 'Experience', url: '#experience' },
+        { id: 4, title: 'Projects', url: '#projects' },
+        { id: 5, title: 'Contact', url: '#contact' },
       ],
     },
   ],
@@ -647,32 +655,39 @@ export const siteConfig = {
 export type SiteConfig = typeof siteConfig;
 
 export const FlickeringFooter = () => {
-  const tablet = useMediaQuery("(max-width: 1024px)");
+  const dict = useDictionary();
+  const tablet = useMediaQuery('(max-width: 1024px)');
+
+  const footerLinks = [
+    { id: 1, title: dict.nav.home, url: '#home' },
+    { id: 2, title: dict.nav.about, url: '#about' },
+    { id: 3, title: dict.nav.experience, url: '#experience' },
+    { id: 4, title: dict.nav.projects, url: '#projects' },
+    { id: 5, title: dict.nav.booking || 'Booking', url: '#booking' },
+  ];
 
   return (
     <footer id="footer" className="w-full pb-0">
       <div className="flex flex-row items-center justify-center p-4">
-        {siteConfig.footerLinks.map((column, columnIndex) => (
-          <ul key={columnIndex} className="flex flex-row gap-x-6 items-center">
-            {column.links.map((link) => (
-              <li
-                key={link.id}
-                className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug text-muted-foreground"
-              >
-                <Link href={link.url}>{link.title}</Link>
-                <div className="flex size-4 items-center justify-center border border-border rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100">
-                  <ChevronRightIcon className="h-4 w-4 " />
-                </div>
-              </li>
-            ))}
-          </ul>
-        ))}
+        <ul className="flex flex-row gap-x-6 items-center">
+          {footerLinks.map((link) => (
+            <li
+              key={link.id}
+              className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug text-muted-foreground"
+            >
+              <Link href={link.url}>{link.title}</Link>
+              <div className="flex size-4 items-center justify-center border border-border rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100">
+                <ChevronRightIcon className="h-4 w-4 " />
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="w-full h-48 md:h-64 relative mt-24 z-0">
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-background z-10 from-40%" />
         <div className="absolute inset-0 mx-6">
           <FlickeringGrid
-            text={tablet ? "Prosper" : "Prosper your workflow"}
+            text={tablet ? 'Prosper' : 'Prosper your workflow'}
             fontSize={tablet ? 70 : 90}
             className="h-full w-full"
             squareSize={2}

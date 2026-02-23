@@ -26,6 +26,9 @@ export const projectsData = [
       github: 'https://github.com/yourhandle/tasky',
       preview: '',
     },
+    imageUrl:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60',
+    themeColor: '210 50% 30%',
   },
   {
     title: 'Prellia',
@@ -39,6 +42,9 @@ export const projectsData = [
       'anti-fraud ML',
     ],
     links: {},
+    imageUrl:
+      'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=900&auto=format&fit=crop&q=60',
+    themeColor: '270 50% 25%',
   },
   {
     title: 'AI Social Media Manager',
@@ -55,6 +61,9 @@ export const projectsData = [
       'Docker',
     ],
     links: {},
+    imageUrl:
+      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=900&auto=format&fit=crop&q=60',
+    themeColor: '180 50% 30%',
   },
   {
     title: 'Bahinlink',
@@ -62,19 +71,28 @@ export const projectsData = [
       'Security-management platform. Manages security operations, agent tracking, and client communications.',
     technologies: ['Next.js', 'TypeScript', 'Supabase'],
     links: {},
+    imageUrl:
+      'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&auto=format&fit=crop&q=60',
+    themeColor: '200 50% 25%',
   },
   {
     title: 'E-commerce Platform',
     description: 'Custom online-payment integration.',
     technologies: [],
     links: {},
+    imageUrl:
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&auto=format&fit=crop&q=60',
+    themeColor: '340 50% 30%',
   },
   {
-    title: 'M0DE (ongoing)',
+    title: 'M0DE',
     description:
       'AI-curated shopping. Conversational storefront + fully automated backend.',
     technologies: [],
     links: {},
+    imageUrl:
+      'https://images.unsplash.com/photo-1557821552-17105176677c?w=900&auto=format&fit=crop&q=60',
+    themeColor: '150 50% 25%',
   },
 ] as const;
 

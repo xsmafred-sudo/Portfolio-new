@@ -8,6 +8,15 @@ import { useDictionary } from '@/hooks/use-dictionary';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 import { projectsData } from '@/lib/data';
 
+const projectKeys = [
+  'tasky',
+  'prellia',
+  'aiSocialMedia',
+  'bahinlink',
+  'ecommerce',
+  'mode',
+] as const;
+
 export const Projects = () => {
   const dict = useDictionary();
   const { ref } = useSectionInView('Projects');
@@ -25,9 +34,14 @@ export const Projects = () => {
           content={dict.projects.subtitle}
         />
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projectsData.map((project, index) => (
-          <Project key={project.title} project={project} index={index} />
+          <Project
+            key={project.title}
+            project={project}
+            index={index}
+            translatedContent={dict.projects[projectKeys[index]]}
+          />
         ))}
       </div>
     </section>

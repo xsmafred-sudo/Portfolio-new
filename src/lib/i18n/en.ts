@@ -5,6 +5,8 @@ export const en = {
     about: 'About',
     experience: 'Experience',
     projects: 'Projects',
+    github: 'GitHub',
+    booking: 'Booking',
     contact: 'Contact',
   },
   hero: {
@@ -80,6 +82,45 @@ export const en = {
     subtitle: "Selected projects from Mouil Prosper's resume.",
     viewCode: 'View Code',
     liveDemo: 'Live Demo',
+    tasky: {
+      title: 'Tasky',
+      description:
+        'Multi-tenant task manager. Dockerised containers deployed to VPS with auto-SSL.',
+    },
+    prellia: {
+      title: 'Prellia',
+      description:
+        'Crypto payment gateway. Processes BTC, ETH, USDT; integrated 3 exchanges; fraud rate < 0.2 %.',
+    },
+    aiSocialMedia: {
+      title: 'AI Social Media Manager',
+      description:
+        'Auto-generates and schedules posts; reduces content-team workload 60 %.',
+    },
+    bahinlink: {
+      title: 'Bahinlink',
+      description:
+        'Security-management platform. Manages security operations, agent tracking, and client communications.',
+    },
+    ecommerce: {
+      title: 'E-commerce Platform',
+      description: 'Custom online-payment integration.',
+    },
+    mode: {
+      title: 'M0DE (ongoing)',
+      description:
+        'AI-curated shopping. Conversational storefront + fully automated backend.',
+    },
+  },
+  github: {
+    title: 'GitHub Contributions',
+    subtitle: 'My contribution activity on GitHub',
+  },
+  booking: {
+    title: 'Book a Meeting',
+    subtitle: "Let's discuss your project",
+    bookNow: 'Book Now',
+    callDuration: '30 min call',
   },
   contact: {
     title: 'Get In Touch',

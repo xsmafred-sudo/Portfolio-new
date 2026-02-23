@@ -5,6 +5,8 @@ export const ja = {
     about: '概要',
     experience: '経験',
     projects: 'プロジェクト',
+    github: 'GitHub',
+    booking: '予約',
     contact: 'お問い合わせ',
   },
   hero: {
@@ -13,7 +15,7 @@ export const ja = {
     name: 'Mouil Prosper',
     subtitle:
       '4年以上、安全なクラウドネイティブSaaSを構築。300万行のデータセットのPostgreSQLレイテンシを40%削減；暗号決済ゲートウェイを構築（月間200万米ドル、 不正<0.2%）；4人のエンジニアによるアジャイルチームをリード。技術スタック：Java 17、Spring Boot、Angular、React、TypeScript、AWS、GCP、Docker、CI/CD。',
-    location: 'カメルーンヤウンデ | +237 691-958-707',
+    location: 'REMOTE, ONSITE | +237 691-958-707',
     available: '就職可能！',
   },
   services: {
@@ -80,6 +82,48 @@ export const ja = {
     subtitle: 'ムイル・プロスパーの選定プロジェクト。',
     viewCode: 'コードを見る',
     liveDemo: 'ライデモ',
+    tasky: {
+      title: 'Tasky',
+      description:
+        'マルチテナントタスクマネージャー。DockerコンテナをVPSに自動SSLでデプロイ。',
+    },
+    prellia: {
+      title: 'Prellia',
+      description:
+        '暗号決済ゲートウェイ。BTC、ETH、USDTを処理；3つの取引所と統合；不正率<0.2%。',
+    },
+    aiSocialMedia: {
+      title: 'AIソーシャルメディアマネージャー',
+      description:
+        '投稿を自動生成・スケジュール；コンテンツチームの作業を60%削減。',
+    },
+    bahinlink: {
+      title: 'Bahinlink',
+      description:
+        'セキュリティ管理プラットフォーム。セキュリティ運用、エージェント追跡、顧客コミュニケーションを管理。',
+    },
+    ecommerce: {
+      title: 'Eコマースプラットフォーム',
+      description: 'カスタムオンライン決済統合。',
+    },
+    mode: {
+      title: 'M0DE（進行中）',
+      description:
+        'AIキュレーションショッピング。会話型ストアフロント＋完全自動化バックエンド。',
+    },
+  },
+  github: {
+    title: 'GitHub コントリビューション',
+    subtitle: '私のGitHubでのコントリビューション活動',
+    search: '検索',
+    loading: '読み込み中...',
+    placeholder: 'GitHubユーザー名を入力',
+  },
+  booking: {
+    title: 'ミーティングを予約',
+    subtitle: 'プロジェクトについて話ししましょう',
+    bookNow: '今すぐ予約',
+    callDuration: '30分通话',
   },
   contact: {
     title: 'お問い合わせ',

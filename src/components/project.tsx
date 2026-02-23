@@ -1,16 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
 
+import { DestinationCard } from '@/components/ui/destination-card';
 import { projectsData } from '@/lib/data';
 
 type TProject = (typeof projectsData)[number];
 
+type TTranslatedContent = {
+  title: string;
+  description: string;
+};
+
 type TProps = {
   project: TProject;
   index: number;
+  translatedContent: TTranslatedContent;
 };
 
 const fadeInAnimationVariants = {
@@ -27,8 +32,21 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export const Project = ({ project, index }: TProps) => {
-  const { title, description, technologies, links } = project;
+export const Project = ({ project, index, translatedContent }: TProps) => {
+  const title = translatedContent?.title ?? project.title;
+  const description = translatedContent?.description ?? project.description;
+  const stats =
+    project.technologies.length > 0
+      ? project.technologies.slice(0, 4).join(' • ') +
+        (project.technologies.length > 4
+          ? ` +${project.technologies.length - 4}`
+          : '')
+      : 'View Project';
+
+  const href =
+    'github' in project.links && project.links.github
+      ? project.links.github
+      : '#';
 
   return (
     <motion.div
@@ -37,27 +55,16 @@ export const Project = ({ project, index }: TProps) => {
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
-      className="flex flex-col rounded border p-5 h-full"
+      className="w-full h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px]"
     >
-      {'github' in links && typeof links.github === 'string' && links.github ? (
-        <Link
-          href={links.github}
-          aria-label={title}
-          target="_blank"
-          className="overflow-hidden rounded"
-        >
-          <span className="font-bold text-blue-600 underline">GitHub</span>
-        </Link>
-      ) : null}
-      <h3 className="mt-3 text-xl font-medium">{title}</h3>
-      <p className="text-muted-foreground mb-2 mt-1">{description}</p>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <span className="rounded-full border px-3 py-1 text-sm" key={tech}>
-            {tech}
-          </span>
-        ))}
-      </div>
+      <DestinationCard
+        imageUrl={project.imageUrl}
+        location={title}
+        flag=""
+        stats={stats}
+        href={href}
+        themeColor={project.themeColor}
+      />
     </motion.div>
   );
 };

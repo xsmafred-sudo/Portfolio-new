@@ -51,7 +51,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   const dictionary = getDictionary(locale);
-  const direction = locale === 'ar' ? 'rtl' : 'ltr';
+  const direction = 'ltr';
 
   useEffect(() => {
     document.documentElement.dir = direction;

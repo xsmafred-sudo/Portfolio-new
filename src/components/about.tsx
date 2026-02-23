@@ -35,8 +35,7 @@ export const About = () => {
           <strong>Languages:</strong> Java, TypeScript, JavaScript, Python, PHP
         </p>
         <p className="mb-4">
-          <strong>Location:</strong> REMOTE, ONSITE | <strong>Phone:</strong>{' '}
-          +237 691-958-707s
+          <strong>Location:</strong> {dict.hero.location}
         </p>
         <p className="mb-4">
           <strong>Contact:</strong>{' '}

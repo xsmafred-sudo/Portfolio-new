@@ -5,6 +5,8 @@ export const pt = {
     about: 'Sobre',
     experience: 'Experiência',
     projects: 'Projetos',
+    github: 'GitHub',
+    booking: 'Reserva',
     contact: 'Contato',
   },
   hero: {
@@ -13,7 +15,7 @@ export const pt = {
     name: 'Mouil Prosper',
     subtitle:
       '4+ anos construindo SaaS cloud-native seguros. Reduziu latência PostgreSQL em 40% para dataset de 3M de linhas; construiu gateway de crypto (2M$ mensais, <0.2% fraude); liderou equipe Agile de 4 engenheiros. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
-    location: 'Yaoundé, Camarões | +237 691-958-707',
+    location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'Disponível para trabalhar!',
   },
   services: {
@@ -80,6 +82,46 @@ export const pt = {
     subtitle: 'Projetos selecionados de Mouil Prosper.',
     viewCode: 'Ver Código',
     liveDemo: 'Demo ao Vivo',
+    tasky: {
+      title: 'Tasky',
+      description:
+        'Gerenciador de tarefas multi-tenant. Containers Dockerizados implantados em VPS com SSL automático.',
+    },
+    prellia: {
+      title: 'Prellia',
+      description:
+        'Gateway de pagamento crypto. Processa BTC, ETH, USDT; integrado taxa de fraude  3 exchanges;< 0.2 %.',
+    },
+    aiSocialMedia: {
+      title: 'Gerenciador de Redes Sociais IA',
+      description:
+        'Gera e agenda posts automaticamente; reduz carga de trabalho da equipe de conteúdo em 60 %.',
+    },
+    bahinlink: {
+      title: 'Bahinlink',
+      description:
+        'Plataforma de gestão de segurança. Gerencia operações de segurança, rastreamento de agentes e comunicações com clientes.',
+    },
+    ecommerce: {
+      title: 'Plataforma de E-commerce',
+      description: 'Integração de pagamento online personalizada.',
+    },
+    mode: {
+      title: 'M0DE (em andamento)',
+      description:
+        'Compras curadas por IA. Storefront conversacional + backend totalmente automatizado.',
+    },
+  },
+  github: {
+    title: 'Contribuições GitHub',
+    subtitle: 'Minha atividade de contribuição no GitHub',
+    search: 'Pesquisar',
+    loading: 'Carregando...',
+    placeholder: 'Digite o nome de usuário do GitHub',
+  },
+  booking: {
+    title: 'Agendar uma Reunião',
+    subtitle: 'Vamos discutir seu projeto',
   },
   contact: {
     title: 'Entre em Contato',

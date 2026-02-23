@@ -5,6 +5,8 @@ export const fr = {
     about: 'À propos',
     experience: 'Expérience',
     projects: 'Projets',
+    github: 'GitHub',
+    booking: 'Réservation',
     contact: 'Contact',
   },
   hero: {
@@ -13,7 +15,7 @@ export const fr = {
     name: 'Mouil Prosper',
     subtitle:
       'Plus de 4 ans à construire des SaaS cloud-natifs sécurisés. Réduit la latence PostgreSQL de 40% pour un ensemble de données de 3M de lignes; a construit une passerelle de crypto (2M$ par mois, <0.2% de fraude); a dirigé une équipe Agile de 4 ingénieurs. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
-    location: 'Yaoundé, Cameroun | +237 691-958-707',
+    location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'Disponible pour travailler!',
   },
   services: {
@@ -80,6 +82,48 @@ export const fr = {
     subtitle: 'Projets sélectionnés de Mouil Prosper.',
     viewCode: 'Voir le Code',
     liveDemo: 'Démo en Direct',
+    tasky: {
+      title: 'Tasky',
+      description:
+        'Gestionnaire de tâches multi-tenant. Conteneurs Dockerisés déployés sur VPS avec SSL automatique.',
+    },
+    prellia: {
+      title: 'Prellia',
+      description:
+        'Passerelle de paiement crypto. Traite BTC, ETH, USDT; intégré 3 exchanges; taux de fraude < 0.2 %.',
+    },
+    aiSocialMedia: {
+      title: 'Gestionnaire de Médias Sociaux IA',
+      description:
+        "Génère et planifie automatiquement les publications; réduit la charge de travail de l'équipe de contenu de 60 %.",
+    },
+    bahinlink: {
+      title: 'Bahinlink',
+      description:
+        'Plateforme de gestion de la sécurité. Gère les opérations de sécurité, le suivi des agents et les communications clients.',
+    },
+    ecommerce: {
+      title: 'Plateforme E-commerce',
+      description: 'Intégration de paiement en ligne personnalisée.',
+    },
+    mode: {
+      title: 'M0DE (en cours)',
+      description:
+        'Shopping organisé par IA. Vitrine conversationnelle + backend entièrement automatisé.',
+    },
+  },
+  github: {
+    title: 'Contributions GitHub',
+    subtitle: 'Mon activité de contribution sur GitHub',
+    search: 'Rechercher',
+    loading: 'Chargement...',
+    placeholder: "Entrez le nom d'utilisateur GitHub",
+  },
+  booking: {
+    title: 'Réserver un Rendez-vous',
+    subtitle: 'Discutons de votre projet',
+    bookNow: 'Réserver',
+    callDuration: 'Appel de 30 min',
   },
   contact: {
     title: 'Restons en Contact',

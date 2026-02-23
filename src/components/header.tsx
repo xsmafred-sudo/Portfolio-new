@@ -16,12 +16,23 @@ import {
 import { Icons } from '@/components/icons';
 import { LanguageSwitcher } from '@/components/language-switcher';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { links } from '@/lib/data';
+import { useDictionary } from '@/hooks/use-dictionary';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSection();
+  const dict = useDictionary();
+
+  const navLinks = [
+    { name: dict.nav.home, hash: '#home' },
+    { name: dict.nav.services, hash: '#services' },
+    { name: dict.nav.about, hash: '#about' },
+    { name: dict.nav.experience, hash: '#experience' },
+    { name: dict.nav.projects, hash: '#projects' },
+    { name: dict.nav.github || 'GitHub', hash: '#github' },
+    { name: dict.nav.booking || 'Booking', hash: '#booking' },
+  ] as const;
 
   return (
     <motion.header
@@ -47,7 +58,7 @@ export const Header = () => {
           </DialogHeader>
           <nav>
             <ul>
-              {links.map(({ name, hash }) => (
+              {navLinks.map(({ name, hash }) => (
                 <li
                   onClick={() => setIsOpen(false)}
                   key={name}
@@ -68,7 +79,7 @@ export const Header = () => {
       </div>
       <nav className="text-muted-foreground hidden text-sm sm:block">
         <ul className="flex gap-5">
-          {links.map(({ name, hash }) => (
+          {navLinks.map(({ name, hash }) => (
             <li key={name}>
               <Link
                 href={hash}

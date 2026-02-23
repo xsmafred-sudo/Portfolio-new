@@ -5,6 +5,8 @@ export const ar = {
     about: 'من أنا',
     experience: 'الخبرة',
     projects: 'المشاريع',
+    github: 'GitHub',
+    booking: 'حجز',
     contact: 'اتصل بي',
   },
   hero: {
@@ -13,7 +15,7 @@ export const ar = {
     name: 'Mouil Prosper',
     subtitle:
       'أكثر من 4 سنوات في بناء SaaS سحابية آمنة. خفض زمن استجابة PostgreSQL بنسبة 40% لمجموعة بيانات من 3 ملايين صف؛ بنى بوابة دفع للعملات الرقمية (2 مليون دولار شهرياً، احتيال أقل من 0.2%)؛ قاد فريقاً هجيناً من 4 مهندسين. المكدس: Java 17، Spring Boot، Angular، React، TypeScript، AWS، GCP، Docker، CI/CD.',
-    location: 'ياوندي، الكاميرون | +237 691-958-707',
+    location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'متاح للعمل!',
   },
   services: {
@@ -80,6 +82,46 @@ export const ar = {
     subtitle: 'المشاريع المختارة لمويل بروسبير.',
     viewCode: 'عرض الكود',
     liveDemo: 'تجربة مباشرة',
+    tasky: {
+      title: 'Tasky',
+      description:
+        'مدير مهام متعدد المستأجرين. حاويات Docker المنشورة على VPS مع SSL التلقائي.',
+    },
+    prellia: {
+      title: 'Prellia',
+      description:
+        'بوابة دفع العملات الرقمية. تعالج BTC، ETH، USDT؛ مدمج 3 منصات تداول؛ معدل الاحتيال < 0.2٪.',
+    },
+    aiSocialMedia: {
+      title: 'مدير وسائل التواصل الاجتماعي بالذكاء الاصطناعي',
+      description:
+        'يولد ويجدول المنشورات تلقائياً؛ يخفض عبء عمل فريق المحتوى بنسبة 60٪.',
+    },
+    bahinlink: {
+      title: 'Bahinlink',
+      description:
+        'منصة إدارة الأمان. تدير عمليات الأمان وتتبع الوكلاء واتصالات العملاء.',
+    },
+    ecommerce: {
+      title: 'منصة التجارة الإلكترونية',
+      description: 'تكامل دفع عبر الإنترنت مخصص.',
+    },
+    mode: {
+      title: 'M0DE (قيد التنفيذ)',
+      description:
+        'تسوق منظم بالذكاء الاصطناعي. واجهة المحادثة + الواجهة الخلفية المؤتمتة بالكامل.',
+    },
+  },
+  github: {
+    title: 'مساهمات GitHub',
+    subtitle: 'نشاط مساهماتي على GitHub',
+    search: 'بحث',
+    loading: 'جاري التحميل...',
+    placeholder: 'أدخل اسم مستخدم GitHub',
+  },
+  booking: {
+    title: 'حجز اجتماع',
+    subtitle: 'لنتحدث عن مشروعك',
   },
   contact: {
     title: 'تواصل معي',
