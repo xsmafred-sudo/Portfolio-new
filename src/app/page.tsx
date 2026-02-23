@@ -11,10 +11,33 @@ import { SectionDivider } from '@/components/section-divider';
 import { Services } from '@/components/services';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { FlickeringFooter } from '@/components/ui/flickering-footer';
+import { projectsData } from '@/lib/data';
+
+const projectsJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: projectsData.map((project, index) => ({
+    '@type': 'SoftwareApplication',
+    position: index + 1,
+    name: project.title,
+    description: project.description,
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Web Browser',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  })),
+};
 
 const HomePage = async () => {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsJsonLd) }}
+      />
       <div className="container flex flex-col items-center">
         <Header />
         <Intro />

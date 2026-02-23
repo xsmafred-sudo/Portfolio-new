@@ -9,11 +9,24 @@ interface DestinationCardProps extends React.HTMLAttributes<HTMLDivElement> {
   stats: string;
   href: string;
   themeColor: string;
+  description?: string;
+  headingId?: string;
 }
 
 const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
   (
-    { className, imageUrl, location, flag, stats, href, themeColor, ...props },
+    {
+      className,
+      imageUrl,
+      location,
+      flag,
+      stats,
+      href,
+      themeColor,
+      description,
+      headingId,
+      ...props
+    },
     ref
   ) => {
     return (
@@ -29,10 +42,19 @@ const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
       >
         <a
           href={href}
+          title={
+            description
+              ? `View ${location} - ${description}`
+              : `View ${location}`
+          }
           className="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg 
                      transition-all duration-500 ease-in-out 
                      group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]"
-          aria-label={`Explore details for ${location}`}
+          aria-label={
+            description
+              ? `Explore ${location}: ${description}`
+              : `Explore ${location}`
+          }
           style={{
             boxShadow: `0 0 40px -15px hsl(var(--theme-color) / 0.5)`,
           }}
@@ -41,6 +63,8 @@ const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
             className="absolute inset-0 bg-cover bg-center 
                        transition-transform duration-500 ease-in-out group-hover:scale-110"
             style={{ backgroundImage: `url(${imageUrl})` }}
+            role="img"
+            aria-label={`${location} project thumbnail`}
           />
 
           <div
@@ -51,7 +75,10 @@ const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
           />
 
           <div className="relative flex flex-col justify-end h-full p-4 sm:p-6 text-white">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
+            <h3
+              id={headingId}
+              className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight"
+            >
               {location} <span className="text-lg sm:text-xl ml-1">{flag}</span>
             </h3>
             <p className="text-xs sm:text-sm text-white/80 mt-1 font-medium line-clamp-1">

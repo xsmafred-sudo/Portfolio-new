@@ -49,13 +49,15 @@ export const Project = ({ project, index, translatedContent }: TProps) => {
       : '#';
 
   return (
-    <motion.div
+    <motion.article
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
       className="w-full h-[300px] sm:h-[380px] md:h-[420px] lg:h-[460px]"
+      aria-labelledby={`project-title-${index}`}
+      role="listitem"
     >
       <DestinationCard
         imageUrl={project.imageUrl}
@@ -64,7 +66,9 @@ export const Project = ({ project, index, translatedContent }: TProps) => {
         stats={stats}
         href={href}
         themeColor={project.themeColor}
+        description={description}
+        headingId={`project-title-${index}`}
       />
-    </motion.div>
+    </motion.article>
   );
 };

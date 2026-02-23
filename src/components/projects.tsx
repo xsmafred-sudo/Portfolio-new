@@ -34,7 +34,11 @@ export const Projects = () => {
           content={dict.projects.subtitle}
         />
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        role="list"
+        aria-label="Portfolio projects"
+      >
         {projectsData.map((project, index) => (
           <Project
             key={project.title}
