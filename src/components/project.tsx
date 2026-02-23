@@ -55,7 +55,7 @@ export const Project = ({ project, index, translatedContent }: TProps) => {
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
-      className="w-full h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px]"
+      className="w-full h-[300px] sm:h-[380px] md:h-[420px] lg:h-[460px]"
     >
       <DestinationCard
         imageUrl={project.imageUrl}
