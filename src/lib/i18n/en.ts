@@ -14,7 +14,7 @@ export const en = {
     title: 'Full-Stack Developer',
     name: 'Mouil Prosper',
     subtitle:
-      '4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway (2M monthly, <0.2% fraud); lead 4-engineer Agile squad. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
+      '4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway (<0.2% fraud); lead 4-engineer Agile squad. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
     location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'Available for work!',
   },
@@ -54,7 +54,7 @@ export const en = {
   about: {
     title: 'About Me',
     summary:
-      '4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway (2M monthly, <0.2% fraud); lead 4-engineer Agile squad.',
+      '4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway (<0.2% fraud); lead 4-engineer Agile squad.',
     coreTechnologies:
       'Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS, network hardening, anti-fraud ML',
     cloudDevOps: 'AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform',

@@ -54,7 +54,7 @@ export const de = {
   about: {
     title: 'Über mich',
     summary:
-      '4+ Jahre Entwicklung sicherer, cloud-nativer SaaS. PostgreSQL-Latenz um 40% für 3M-Datensätze reduziert; Crypto-Gateway gebaut (<0.2% Betrug); geleitetes 4-köpfiges Agile-Team.',
+      '4+ Jahre Entwicklung sicherer, cloud-nativer SaaS. PostgreSQL-Latenz um 40% für 3M-Datensätze reduziert; Crypto-Gateway gebaut (2M monatlich, <0.2% Betrug); geleitetes 4-köpfiges Agile-Team.',
     coreTechnologies:
       'Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS, Netzwerkhärtung, Anti-Fraud ML',
     cloudDevOps: 'AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform',

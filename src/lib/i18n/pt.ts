@@ -14,7 +14,7 @@ export const pt = {
     title: 'Desenvolvedor Full-Stack',
     name: 'Mouil Prosper',
     subtitle:
-      '4+ anos construindo SaaS cloud-native seguros. Reduziu latência PostgreSQL em 40% para dataset de 3M de linhas; construiu gateway de crypto (2M$ mensais, <0.2% fraude); liderou equipe Agile de 4 engenheiros. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
+      '4+ anos construindo SaaS cloud-native seguros. Reduziu latência PostgreSQL em 40% para dataset de 3M de linhas; construiu gateway de crypto (<0.2% fraude); liderou equipe Agile de 4 engenheiros. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
     location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'Disponível para trabalhar!',
   },
@@ -54,7 +54,7 @@ export const pt = {
   about: {
     title: 'Sobre Mim',
     summary:
-      '4+ anos construindo SaaS cloud-native seguros. Reduziu latência PostgreSQL em 40% para dataset de 3M de linhas; construiu gateway de crypto (2M mensais, <0.2% fraude); liderou equipe Agile de 4 engenheiros.',
+      '4+ anos construindo SaaS cloud-native seguros. Reduziu latência PostgreSQL em 40% para dataset de 3M de linhas; construiu gateway de crypto (<0.2% fraude); liderou equipe Agile de 4 engenheiros.',
     coreTechnologies:
       'Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS, hardening de rede, anti-fraude ML',
     cloudDevOps: 'AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform',

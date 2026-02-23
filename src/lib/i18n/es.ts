@@ -14,7 +14,7 @@ export const es = {
     title: 'Desarrollador Full-Stack',
     name: 'Mouil Prosper',
     subtitle:
-      'Más de 4 años construyendo SaaS cloud-native seguros. Redujo la latencia de PostgreSQL un 40% para un dataset de 3M de filas; construyó pasarela de crypto (2M$ mensuales, <0.2% fraude); lideró equipo Agile de 4 ingenieros. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
+      'Más de 4 años construyendo SaaS cloud-native seguros. Redujo la latencia de PostgreSQL un 40% para un dataset de 3M de filas; construyó pasarela de crypto (<0.2% fraude); lideró equipo Agile de 4 ingenieros. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
     location: 'REMOTE, ONSITE | +237 691-958-707',
     available: '¡Disponible para trabajar!',
   },
@@ -54,7 +54,7 @@ export const es = {
   about: {
     title: 'Acerca de Mí',
     summary:
-      'Más de 4 años construyendo SaaS cloud-native seguros. Redujo la latencia de PostgreSQL un 40% para un dataset de 3M de filas; construyó pasarela de crypto (2M mensuales, <0.2% fraude); lideró equipo Agile de 4 ingenieros.',
+      'Más de 4 años construyendo SaaS cloud-native seguros. Redujo la latencia de PostgreSQL un 40% para un dataset de 3M de filas; construyó pasarela de crypto (<0.2% fraude); lideró equipo Agile de 4 ingenieros.',
     coreTechnologies:
       'Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS, fortalecimiento de red, anti-fraude ML',
     cloudDevOps: 'AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform',
