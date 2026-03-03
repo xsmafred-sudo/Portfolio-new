@@ -59,8 +59,9 @@ export const Intro = () => {
         className="flex flex-row gap-2"
       >
         <Button asChild size="lg">
-          <Link href="#contact">
-            {dict.contact.email} <Icons.arrowRight className="ml-2 size-4" />
+          <Link href="/MOUIL PROSPER UPDATE 2026.pdf" target="_blank">
+            {dict.hero.downloadResume}{' '}
+            <Icons.download className="ml-2 size-4" />
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>

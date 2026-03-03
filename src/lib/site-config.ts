@@ -1,7 +1,7 @@
 import { env } from '@/env.mjs';
 
 export const siteConfig = {
-  title: 'Mouil Prosper | Front-end Developer & Software Engineer',
+  title: 'Mouil Prosper | Full-Stack Developer & Software Engineer',
   description:
     "Hello, I'm Mouil Prosper, a passionate front-end developer specializing in React and Next.js. I build modern, responsive websites and web applications with a focus on performance, accessibility, and user experience. View my portfolio, projects, and skills.",
   keywords: [

@@ -14,9 +14,10 @@ export const ja = {
     title: 'フルスタック開発者',
     name: 'Mouil Prosper',
     subtitle:
-      '4年以上、安全なクラウドネイティブSaaSを構築。300万行のデータセットのPostgreSQLレイテンシを40%削減；暗号決済ゲートウェイを構築（月間200万米ドル、 不正<0.2%）；4人のエンジニアによるアジャイルチームをリード。技術スタック：Java 17、Spring Boot、Angular、React、TypeScript、AWS、GCP、Docker、CI/CD。',
+      '安全でクラウドネイティブティブなSaaSアプリケーションの設計、開発、デプロイで4年以上実績のあるフルスタックエンジニア。データアクセスの最適化、AI駆動型決済_gatewayの構築、アジャイル/Scrumチームの辣営経験。技術スタック：Java (Spring Boot)、TypeScript (Angular, React)、Node.js、Docker、GCP & AWS、RESTfulマイクロサービス、CI/CD。',
     location: 'REMOTE, ONSITE | +237 691-958-707',
     available: '就職可能！',
+    downloadResume: '履歴書をダウンロード',
   },
   services: {
     title: 'サービス',
@@ -33,7 +34,7 @@ export const ja = {
     api: {
       title: 'API開発',
       description:
-        '安全な認証を備えたRESTful API、GraphQLエンドポイント、ミクロサービスの設計。',
+        '安全な認証を備えたRESTful API、GraphQLエンドポイント、マイクロサービスの設計。',
     },
     database: {
       title: 'データベース管理',
@@ -54,27 +55,34 @@ export const ja = {
   about: {
     title: '私について',
     summary:
-      '4年以上、安全なクラウドネイティブSaaSを構築。300万行のデータセットのPostgreSQLレイテンシを40%削減；暗号決済ゲートウェイを構築（月間200万米ドル、 不正<0.2%）；4人のエンジニアによるアジャイルチームをリード。',
+      '安全でクラウドネイティブティブなSaaSアプリケーションの設計、開発、デプロイで4年以上の経験を持つ結果导向のフルスタックエンジニア。データアクセスの最適化、AI駆動型決済_gatewayの構築、アジャイル/Scrumチームの辣営に辣功しています。',
     coreTechnologies:
-      'Java 17、Spring Boot、Angular、React、TypeScript、AWS、GCP、Docker、CI/CD、PostgreSQL、MySQL、MongoDB、Supabase、REST、JSON、JWT、OAuth2、WebSocket、gRPC、GraphQL、OWASP Top-10、SSL/TLS、ネットワーク強化、不正対策ML',
+      'Java、Spring Boot、Angular、React、Next.js、Node.js、NestJS、Laravel、TypeScript、JavaScript、Python、PHP、AWS、GCP、Docker、Vercel、Coolify、CI/CD、PostgreSQL、MySQL、MongoDB、Supabase、REST、JSON、JWT、OAuth2、WebSocket、gRPC、GraphQL、OWASP Top-10、SSL/TLS',
     cloudDevOps: 'AWS、GCP、Docker、Vercel、Coolify、GitHub Actions、Terraform',
   },
   experience: {
     title: '経験',
     subtitle: 'ムイル・プロスパーの職業経験。',
+    digitwace: {
+      role: 'フルスタック開発者',
+      company: 'DIGITWACE SARL',
+      period: '2025年12月 – 2026年2月',
+      description:
+        'COSUMAFのウェブサイトをWordPressからReact.js + Laravelに移行。SOTRABUS用の新しいWordPressページを開発。NestJS + AngularでNufi SMS Webサイトを完全に再構築し、モジュラーアーキテクチャとRESTful APIを設計。ステークホルダーと調整し、プロダクトバックログを管理。',
+    },
     stevo: {
       role: 'フルスタック開発者',
       company: 'Stevo Digital',
-      period: '2023 – 2025',
+      period: '2023年1月 – 2025年4月',
       description:
-        '6週間スプリントごとに5つの主要機能をリリース（Spring Boot + Angular/React）。GCPワークロードをCoolify CI/CDに移行によりデプロイ時間を35%削減。月間100万以上の	callを提供するRESTマイクロサービスを構築、可用性99.9%。HotjarによるUI/UX反復によりユーザーエンゲージメントを18%向上。',
+        'Spring BootとAngular/Reactを使用してWebおよびモバイルアプリケーションのエンドツーエンド開発を主導。6週間スプリントごとに5つの主要機能をリリース。GCPとVercelでクラウドインフラストラクチャを最適化し、Coolify CI/CDを通じて展開時間を35%削減。1ヶ月100万以上の通話を提供するRESTマイクロサービスを構築、可用性99.9%。HotjarによるUI/UX反復でユーザーエンゲージメントを18%向上。',
     },
     microqq: {
-      role: 'ソフトウェアエンジニア＆ITサポート',
+      role: 'ソフトウェア開発者',
       company: 'Micro QQ Tech',
-      period: '2022 – 2023',
+      period: '2022年9月 – 2023年10月',
       description:
-        '出産記録用のLaravel CMSを設計；データ取得を40%高速化。Ubuntu VPSとPostgreSQLを管理；セキュリティインシデントゼロ。Gitフロー、コードレビュー、ユニットテストで4人のジュニア開発者をメンター。75以上のワークステーションへのキャンパス全体のアップグレードを展開。',
+        'PHP/Laravelで妊婦と新生児記録のCMSを設計・構築。データ取得を40%高速化し、複数の病院に提供服务。PostgreSQLとLAN/WANセキュリティを管理し、ゼロ侵害記録。Gitフロー、コードレビュー、ユニットテストで4人のジュニア開発者をメンター。75人以上の学生のためのキャンパス全体のソフトウェアとネットワークアップグレードを実施。',
     },
   },
   projects: {
@@ -90,30 +98,31 @@ export const ja = {
     prellia: {
       title: 'Prellia',
       description:
-        '暗号決済ゲートウェイ。BTC、ETH、USDTを処理；3つの取引所と統合；不正率<0.2%。',
+        'マイクロサービスシステムとして構築されたフルスタック決済プラットフォーム。REST API_gateway、高性能財務台帳、Reactフロントエンド、クラウド対応インフラストラクチャを組み合わせています。',
     },
-    aiSocialMedia: {
-      title: 'AIソーシャルメディアマネージャー',
+    opsear: {
+      title: 'Opsear (Postiz Fork)',
       description:
-        '投稿を自動生成・スケジュール；コンテンツチームの作業を60%削減。',
+        'AI駆動のソーシャルメディアスケジューリングツール。先進的なAI機能（Deepseek、Mistral AI、Gemini API）を統合し、コンテンツチームの作業を60%削減。',
     },
-    bahinlink: {
-      title: 'Bahinlink',
+    cosumaf: {
+      title: 'COSUMAF',
       description:
-        'セキュリティ管理プラットフォーム。セキュリティ運用、エージェント追跡、顧客コミュニケーションを管理。',
-    },
-    ecommerce: {
-      title: 'Eコマースプラットフォーム',
-      description: 'カスタムオンライン決済統合。',
+        '中非金融市场監督委員会（COSUMAF）の公式WebサイトをWordPressからReact.js + Laravelに移行。スケーラビリティ、保守性、パフォーマンスを向上。',
     },
     mode: {
-      title: 'M0DE（進行中）',
+      title: 'M0DE',
       description:
         'AIキュレーションショッピング。会話型ストアフロント＋完全自動化バックエンド。',
     },
+    antho: {
+      title: 'Antho-multiservice',
+      description:
+        'エアコンの設置、修理、保守サービス。冷藏/冷蔵庫室の設置および商用冷蔵庫の販売と修理。',
+    },
   },
   github: {
-    title: 'GitHub コントリビューション',
+    title: 'GitHubコントリビューション',
     subtitle: '私のGitHubでのコントリビューション活動',
     search: '検索',
     loading: '読み込み中...',

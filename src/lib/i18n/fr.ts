@@ -14,9 +14,10 @@ export const fr = {
     title: 'Développeur Full-Stack',
     name: 'Mouil Prosper',
     subtitle:
-      'Plus de 4 ans à construire des SaaS cloud-natifs sécurisés. Réduit la latence PostgreSQL de 40% pour un ensemble de données de 3M de lignes; a construit une passerelle de crypto (<0.2% de fraude); a dirigé une équipe Agile de 4 ingénieurs. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
+      "Ingénieur Full-Stack axé sur les résultats, disposant de plus de 4 ans d'expérience dans la conception, le développement et le déploiement d'applications SaaS sécurisées et natives du cloud. Expertise en optimisation d'accès aux données, création de passerelles de paiement basées sur l'IA et direction d'équipes Agile/Scrum. Stack: Java (Spring Boot), TypeScript (Angular, React), Node.js, Docker, GCP & AWS, microservices RESTful et pipelines CI/CD.",
     location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'Disponible pour travailler!',
+    downloadResume: 'Télécharger CV',
   },
   services: {
     title: 'Services',
@@ -54,27 +55,34 @@ export const fr = {
   about: {
     title: 'À propos de moi',
     summary:
-      'Plus de 4 ans à construire des SaaS cloud-natifs sécurisés. Réduit la latence PostgreSQL de 40% pour un ensemble de données de 3M de lignes; a construit une passerelle de crypto (<0.2% de fraude); a dirigé une équipe Agile de 4 ingénieurs.',
+      "Ingénieur Full-Stack axé sur les résultats, disposant de plus de 4 ans d'expérience dans la conception, le développement et le déploiement d'applications SaaS sécurisées et natives du cloud. Réussite avérée dans l'optimisation de l'accès aux données, la création de passerelles de paiement basées sur l'IA et la direction d'équipes Agile/Scrum.",
     coreTechnologies:
-      'Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS, renforcement du réseau, anti-fraude ML',
+      'Java, Spring Boot, Angular, React, Next.js, Node.js, NestJS, Laravel, TypeScript, JavaScript, Python, PHP, AWS, GCP, Docker, Vercel, Coolify, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS',
     cloudDevOps: 'AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform',
   },
   experience: {
     title: 'Expérience',
     subtitle: 'Expérience professionnelle de Mouil Prosper.',
+    digitwace: {
+      role: 'Développeur Full-Stack',
+      company: 'DIGITWACE SARL',
+      period: 'Déc. 2025 – Fév. 2026',
+      description:
+        'Migration du site COSUMAF de WordPress vers React.js + Laravel, optimisant performance, maintenabilité et évolutivité. Conception de nouvelles pages WordPress pour SOTRABUS. Refonte complète du site Nufi SMS avec NestJS + Angular, architecture modulaire et API RESTful. Coordination avec les parties prenantes et gestion des carnets de commandes.',
+    },
     stevo: {
       role: 'Développeur Full-Stack',
       company: 'Stevo Digital',
-      period: '2023 – 2025',
+      period: 'Janv. 2023 – Avr. 2025',
       description:
-        "Livré 5 fonctionnalités majeures par sprint de 6 semaines (Spring Boot + Angular/React). Réduit le temps de déploiement de 35% en migrant les charges de travail GCP vers Coolify CI/CD. Construit des micro-services REST servant plus de 1M d'appels mensuels à 99.9% de disponibilité. A augmenté l'engagement utilisateur de 18% via des itérations UI/UX basées sur Hotjar.",
+        "Direction du développement complet d'applications web et mobiles avec Spring Boot et Angular/React, livrant 5 fonctionnalités majeures par sprint de 6 semaines. Optimisation de l'infrastructure cloud sur GCP et Vercel, permettant une diminution de 35% du temps de déploiement grâce à Coolify CI/CD. Conception de microservices REST performants gérant plus de 1M d'appels mensuels à 99.9% de disponibilité. Augmentation de l'engagement utilisateur de 18% via des itérations UI/UX Hotjar.",
     },
     microqq: {
-      role: 'Ingénieur Logiciel & Support IT',
+      role: 'Développeur de logiciels',
       company: 'Micro QQ Tech',
-      period: '2022 – 2023',
+      period: 'Sept. 2022 – Oct. 2023',
       description:
-        'Conçu un CMS Laravel pour les dossiers de maternité; accéléré la récupération des données de 40%. Administré Ubuntu VPS & PostgreSQL; zéro incident de sécurité. A mentoré 4 devs juniors sur Git flow, revues de code, tests unitaires. Déployé des mises à niveau campus-wide pour plus de 75 postes de travail.',
+        "Conception et mise en œuvre d'un CMS PHP/Laravel pour dossiers de maternité et nouveau-nés, accélérant la récupération des données de 40% et desservant plusieurs hôpitaux. Administration de PostgreSQL et sécurité LAN/WAN avec zéro incident. Mentorat de 4 développeurs juniors sur Git flow, revues de code et tests unitaires. Mise à niveau campus-wide pour plus de 75 étudiants.",
     },
   },
   projects: {
@@ -90,26 +98,27 @@ export const fr = {
     prellia: {
       title: 'Prellia',
       description:
-        'Passerelle de paiement crypto. Traite BTC, ETH, USDT; intégré 3 exchanges; taux de fraude < 0.2 %.',
+        'Plateforme de paiement complète en système de microservices. Combine passerelle API REST, registre financier performant, frontend React et infrastructure cloud-ready.',
     },
-    aiSocialMedia: {
-      title: 'Gestionnaire de Médias Sociaux IA',
+    opsear: {
+      title: 'Opsear (Fork Postiz)',
       description:
-        "Génère et planifie automatiquement les publications; réduit la charge de travail de l'équipe de contenu de 60 %.",
+        "Outil de planification de médias sociaux alimenté par l'IA avec capacités avancées (Deepseek, Mistral AI, Gemini API) réduisant la charge de travail de l'équipe de contenu de 60%.",
     },
-    bahinlink: {
-      title: 'Bahinlink',
+    cosumaf: {
+      title: 'COSUMAF',
       description:
-        'Plateforme de gestion de la sécurité. Gère les opérations de sécurité, le suivi des agents et les communications clients.',
-    },
-    ecommerce: {
-      title: 'Plateforme E-commerce',
-      description: 'Intégration de paiement en ligne personnalisée.',
+        "Migration du site officiel de la Commission de Surveillance du Marché Financier de l'Afrique Centrale de WordPress vers React.js + Laravel, optimisant évolutivité, maintenabilité et performances.",
     },
     mode: {
-      title: 'M0DE (en cours)',
+      title: 'M0DE',
       description:
-        'Shopping organisé par IA. Vitrine conversationnelle + backend entièrement automatisé.',
+        "Expérience d'achat organisée par IA avec vitrine conversationnelle et backend entièrement automatisé.",
+    },
+    antho: {
+      title: 'Antho-multiservice',
+      description:
+        "Services d'installation, réparation et maintenance de climatisation. Installation et maintenance de chambres froides/de réfrigération, vente et réparation de réfrigérateurs professionnels.",
     },
   },
   github: {

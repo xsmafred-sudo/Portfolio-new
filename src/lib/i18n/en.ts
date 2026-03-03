@@ -14,9 +14,10 @@ export const en = {
     title: 'Full-Stack Developer',
     name: 'Mouil Prosper',
     subtitle:
-      '4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway (<0.2% fraud); lead 4-engineer Agile squad. Stack: Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD.',
+      'Results-driven Full-Stack Engineer with 4+ years in designing, developing, and deploying secure, cloud-native SaaS applications. Optimized data access, built AI-driven payment gateways, and led Agile/Scrum teams. Stack: Java (Spring Boot), TypeScript (Angular, React), Node.js, Docker, GCP & AWS, RESTful microservices, and CI/CD pipelines.',
     location: 'REMOTE, ONSITE | +237 691-958-707',
     available: 'Available for work!',
+    downloadResume: 'Download Resume',
   },
   services: {
     title: 'Services',
@@ -54,27 +55,34 @@ export const en = {
   about: {
     title: 'About Me',
     summary:
-      '4+ years building secure, cloud-native SaaS. Cut PostgreSQL latency 40% for 3M-row dataset; built crypto gateway (<0.2% fraud); lead 4-engineer Agile squad.',
+      'Results-driven Full-Stack Engineer with 4+ years of experience in designing, developing, and deploying secure, cloud-native SaaS applications. Demonstrated success in optimizing data access, building AI-driven payment gateways, and leading Agile/Scrum teams.',
     coreTechnologies:
-      'Java 17, Spring Boot, Angular, React, TypeScript, AWS, GCP, Docker, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS, network hardening, anti-fraud ML',
+      'Java, Spring Boot, Angular, React, Next.js, Node.js, NestJS, Laravel, TypeScript, JavaScript, Python, PHP, AWS, GCP, Docker, Vercel, Coolify, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS',
     cloudDevOps: 'AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform',
   },
   experience: {
     title: 'Experience',
     subtitle: "Professional experience from Mouil Prosper's resume.",
+    digitwace: {
+      role: 'Full-Stack Developer',
+      company: 'DIGITWACE SARL',
+      period: 'Dec 2025 – Feb 2026',
+      description:
+        'Migrated COSUMAF website from WordPress to React.js + Laravel, improving performance, maintainability, and scalability. Developed new WordPress pages for SOTRABUS. Fully rebuilt Nufi SMS website using NestJS + Angular with modular architecture and RESTful APIs. Coordinated with stakeholders and managed product backlogs.',
+    },
     stevo: {
       role: 'Full-Stack Developer',
       company: 'Stevo Digital',
-      period: '2023 – 2025',
+      period: 'Jan 2023 – Apr 2025',
       description:
-        'Shipped 5 major features per 6-week sprint (Spring Boot + Angular/React). Reduced deployment time 35% by moving GCP workloads to Coolify CI/CD. Built REST micro-services serving 1M+ monthly calls at 99.9% uptime. Boosted user-engagement 18% via Hotjar-driven UI/UX iterations.',
+        'Spearheaded end-to-end development of web and mobile applications using Spring Boot and Angular/React, delivering 5 major features per 6-week sprint. Optimized cloud infrastructure on GCP and Vercel, achieving 35% reduction in deployment time through Coolify CI/CD. Built RESTful microservices processing 1M+ monthly calls at 99.9% uptime. Boosted user engagement by 18% via Hotjar-driven UI/UX iterations.',
     },
     microqq: {
-      role: 'Software Engineer & IT Support',
+      role: 'Software Developer',
       company: 'Micro QQ Tech',
-      period: '2022 – 2023',
+      period: 'Sep 2022 – Oct 2023',
       description:
-        'Designed Laravel CMS for maternity records; accelerated data retrieval 40%. Administered Ubuntu VPS & PostgreSQL; zero security incidents. Mentored 4 junior devs on Git flow, code reviews, unit testing. Rolled out campus-wide upgrades for 75+ workstations.',
+        'Designed and deployed PHP/Laravel CMS for maternity and newborn records, accelerating data retrieval by 40% and serving multiple hospitals. Administered PostgreSQL and LAN/WAN security with zero-breach record. Mentored 4 junior developers in Git flow, code reviews, and unit testing. Orchestrated campus-wide software and network upgrades for 75+ students.',
     },
   },
   projects: {
@@ -90,26 +98,27 @@ export const en = {
     prellia: {
       title: 'Prellia',
       description:
-        'Crypto payment gateway. Processes BTC, ETH, USDT; integrated 3 exchanges; fraud rate < 0.2 %.',
+        'Full-stack payment platform built as a microservices system. Combines REST API gateway, high-performance financial ledger, React frontend, and cloud-ready infrastructure.',
     },
-    aiSocialMedia: {
-      title: 'AI Social Media Manager',
+    opsear: {
+      title: 'Opsear (Postiz Fork)',
       description:
-        'Auto-generates and schedules posts; reduces content-team workload 60 %.',
+        'AI-powered social media scheduling tool with advanced AI capabilities (Deepseek, Mistral AI, Gemini API) reducing content-team workload by 60%.',
     },
-    bahinlink: {
-      title: 'Bahinlink',
+    cosumaf: {
+      title: 'COSUMAF',
       description:
-        'Security-management platform. Manages security operations, agent tracking, and client communications.',
-    },
-    ecommerce: {
-      title: 'E-commerce Platform',
-      description: 'Custom online-payment integration.',
+        "Migrated official website of Commission de Surveillance du Marché Financier de l'Afrique Centrale from WordPress to React.js + Laravel, improving scalability, maintainability, and performance.",
     },
     mode: {
-      title: 'M0DE (ongoing)',
+      title: 'M0DE',
       description:
-        'AI-curated shopping. Conversational storefront + fully automated backend.',
+        'AI-curated shopping experience with conversational storefront and fully automated backend.',
+    },
+    antho: {
+      title: 'Antho-multiservice',
+      description:
+        'Air conditioning installation, repair, and maintenance services. Cold storage/refrigeration chamber installation and commercial refrigerator sales and repair.',
     },
   },
   github: {

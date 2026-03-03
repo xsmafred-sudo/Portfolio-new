@@ -11,10 +11,10 @@ import { projectsData } from '@/lib/data';
 const projectKeys = [
   'tasky',
   'prellia',
-  'aiSocialMedia',
-  'bahinlink',
-  'ecommerce',
+  'opsear',
+  'cosumaf',
   'mode',
+  'antho',
 ] as const;
 
 export const Projects = () => {
