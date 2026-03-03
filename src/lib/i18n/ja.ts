@@ -55,7 +55,7 @@ export const ja = {
   about: {
     title: '私について',
     summary:
-      '安全でクラウドネイティブティブなSaaSアプリケーションの設計、開発、デプロイで4年以上の経験を持つ結果导向のフルスタックエンジニア。データアクセスの最適化、AI駆動型決済_gatewayの構築、アジャイル/Scrumチームの辣営に辣功しています。',
+      '4年以上、安全でクラウドネイティブティブなアプリケーションを構築してきたフルスタック開発者。パフォーマンスの最適化、AIソリューションの実装、アジャイルチームの辣営に情熱を注いでいます。',
     coreTechnologies:
       'Java、Spring Boot、Angular、React、Next.js、Node.js、NestJS、Laravel、TypeScript、JavaScript、Python、PHP、AWS、GCP、Docker、Vercel、Coolify、CI/CD、PostgreSQL、MySQL、MongoDB、Supabase、REST、JSON、JWT、OAuth2、WebSocket、gRPC、GraphQL、OWASP Top-10、SSL/TLS',
     cloudDevOps: 'AWS、GCP、Docker、Vercel、Coolify、GitHub Actions、Terraform',

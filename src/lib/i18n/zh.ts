@@ -53,7 +53,7 @@ export const zh = {
   about: {
     title: '关于我',
     summary:
-      '经验丰富的全栈工程师，4年以上设计、开发和部署安全云原生SaaS应用的经验。在优化数据访问、构建AI驱动支付网关和领导敏捷/Scrum团队方面取得显著成功。',
+      '全栈开发工程师，4年以上构建安全云原生应用的经验。热衷于优化性能、实施AI解决方案和领导敏捷团队。',
     coreTechnologies:
       'Java、Spring Boot、Angular、React、Next.js、Node.js、NestJS、Laravel、TypeScript、JavaScript、Python、PHP、AWS、GCP、Docker、Vercel、Coolify、CI/CD、PostgreSQL、MySQL、MongoDB、Supabase、REST、JSON、JWT、OAuth2、WebSocket、gRPC、GraphQL、OWASP Top-10、SSL/TLS',
     cloudDevOps: 'AWS、GCP、Docker、Vercel、Coolify、GitHub Actions、Terraform',

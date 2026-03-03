@@ -83,8 +83,12 @@ export const Intro = () => {
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>
-          <Link href="https://pepis.world" aria-label="Website" target="_blank">
-            <span className="font-bold text-lg">🌐</span>
+          <Link
+            href="https://wa.me/237691958707"
+            aria-label="WhatsApp"
+            target="_blank"
+          >
+            <Icons.whatsapp className="size-5" />
           </Link>
         </Button>
       </motion.div>

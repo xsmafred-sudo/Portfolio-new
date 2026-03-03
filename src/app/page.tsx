@@ -12,6 +12,7 @@ import { SectionDivider } from '@/components/section-divider';
 import { Services } from '@/components/services';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { FlickeringFooter } from '@/components/ui/flickering-footer';
+import { FlickeringGrid } from '@/components/ui/flickering-grid';
 import { projectsData } from '@/lib/data';
 
 const projectsJsonLd = {
@@ -39,6 +40,16 @@ const HomePage = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsJsonLd) }}
       />
+      <div className="fixed inset-0 -z-10">
+        <FlickeringGrid
+          className="size-full"
+          squareSize={4}
+          gridGap={6}
+          color="#6B7280"
+          maxOpacity={0.3}
+          flickerChance={0.1}
+        />
+      </div>
       <div className="container flex flex-col items-center">
         <Header />
         <Intro />

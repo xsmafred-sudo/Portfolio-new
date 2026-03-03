@@ -55,7 +55,7 @@ export const fr = {
   about: {
     title: 'À propos de moi',
     summary:
-      "Ingénieur Full-Stack axé sur les résultats, disposant de plus de 4 ans d'expérience dans la conception, le développement et le déploiement d'applications SaaS sécurisées et natives du cloud. Réussite avérée dans l'optimisation de l'accès aux données, la création de passerelles de paiement basées sur l'IA et la direction d'équipes Agile/Scrum.",
+      "Développeur Full-Stack avec plus de 4 ans d'expérience dans la construction d'applications cloud-natives sécurisées. Passionné par l'optimisation des performances, la mise en œuvre de solutions IA et la direction d'équipes agiles.",
     coreTechnologies:
       'Java, Spring Boot, Angular, React, Next.js, Node.js, NestJS, Laravel, TypeScript, JavaScript, Python, PHP, AWS, GCP, Docker, Vercel, Coolify, CI/CD, PostgreSQL, MySQL, MongoDB, Supabase, REST, JSON, JWT, OAuth2, WebSocket, gRPC, GraphQL, OWASP Top-10, SSL/TLS',
     cloudDevOps: 'AWS, GCP, Docker, Vercel, Coolify, GitHub Actions, Terraform',
