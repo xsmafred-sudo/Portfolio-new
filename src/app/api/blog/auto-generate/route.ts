@@ -159,6 +159,7 @@ interface GenerationLog {
   lastGeneratedAt: string | null;
   postsGeneratedToday: number;
   lastGenerationDate: string;
+  cronBatchSize: number;
 }
 
 async function getGenerationLog(): Promise<GenerationLog> {
@@ -170,6 +171,7 @@ async function getGenerationLog(): Promise<GenerationLog> {
       lastGeneratedAt: null,
       postsGeneratedToday: 0,
       lastGenerationDate: '',
+      cronBatchSize: 2,
     };
   }
 }
@@ -178,29 +180,25 @@ async function saveGenerationLog(log: GenerationLog): Promise<void> {
   await fs.writeFile(GENERATION_LOG_FILE, JSON.stringify(log, null, 2));
 }
 
-function shouldGeneratePost(log: GenerationLog): {
+function shouldGeneratePosts(log: GenerationLog): {
   shouldGenerate: boolean;
-  hoursSinceLast: number;
+  postsToGenerate: number;
 } {
   const now = new Date();
   const today = now.toISOString().split('T')[0];
 
   if (log.lastGenerationDate !== today) {
-    return { shouldGenerate: true, hoursSinceLast: 24 };
+    return { shouldGenerate: true, postsToGenerate: log.cronBatchSize };
   }
 
-  if (log.postsGeneratedToday >= 2) {
-    return { shouldGenerate: false, hoursSinceLast: 0 };
+  if (log.postsGeneratedToday >= log.cronBatchSize) {
+    return { shouldGenerate: false, postsToGenerate: 0 };
   }
 
-  if (!log.lastGeneratedAt) {
-    return { shouldGenerate: true, hoursSinceLast: 24 };
-  }
-
-  const lastGen = new Date(log.lastGeneratedAt);
-  const hoursSinceLast = (now.getTime() - lastGen.getTime()) / (1000 * 60 * 60);
-
-  return { shouldGenerate: hoursSinceLast >= 4, hoursSinceLast };
+  return {
+    shouldGenerate: true,
+    postsToGenerate: log.cronBatchSize - log.postsGeneratedToday,
+  };
 }
 
 function getNextTopicIndex(generatedPosts: GeneratedPost[]): number {
@@ -224,85 +222,94 @@ export async function POST() {
     }
 
     const log = await getGenerationLog();
-    const { shouldGenerate, hoursSinceLast } = shouldGeneratePost(log);
+    const { shouldGenerate, postsToGenerate } = shouldGeneratePosts(log);
 
     if (!shouldGenerate) {
       return NextResponse.json({
         success: true,
-        message: `Already generated ${log.postsGeneratedToday}/2 posts today. Next generation in ${4 - Math.floor(hoursSinceLast)} hours.`,
+        message: `Already generated ${log.postsGeneratedToday}/${log.cronBatchSize} posts today. Next generation tomorrow.`,
         postsGeneratedToday: log.postsGeneratedToday,
         lastGeneratedAt: log.lastGeneratedAt,
       });
     }
 
     const generatedPosts = await getGeneratedPosts();
-    const topicIndex = getNextTopicIndex(generatedPosts);
-    const { topic, keywords } = BLOG_TOPICS_QUEUE[topicIndex];
+    const newPosts: GeneratedPost[] = [];
 
-    console.log(`Generating blog post: ${topic}`);
+    for (let i = 0; i < postsToGenerate; i++) {
+      const topicIndex = getNextTopicIndex([...generatedPosts, ...newPosts]);
+      const { topic, keywords } = BLOG_TOPICS_QUEUE[topicIndex];
 
-    const post = await generateBlogPost(topic, keywords);
+      console.log(`Generating blog post ${i + 1}/${postsToGenerate}: ${topic}`);
 
-    if (!post) {
-      return NextResponse.json(
-        { error: 'Failed to generate blog post' },
-        { status: 500 }
-      );
+      const post = await generateBlogPost(topic, keywords);
+
+      if (!post) {
+        console.error(`Failed to generate post: ${topic}`);
+        continue;
+      }
+
+      console.log(`Translating to FR, ZH, JA...`);
+
+      const [frTranslation, zhTranslation, jaTranslation] = await Promise.all([
+        translateBlogPost(post, 'fr'),
+        translateBlogPost(post, 'zh'),
+        translateBlogPost(post, 'ja'),
+      ]);
+
+      const translations = {
+        fr: frTranslation || undefined,
+        zh: zhTranslation || undefined,
+        ja: jaTranslation || undefined,
+      };
+
+      const newPost: GeneratedPost = {
+        ...post,
+        translations,
+        generatedAt: new Date().toISOString(),
+      };
+
+      newPosts.push(newPost);
     }
 
-    console.log(`Translating to FR, ZH, JA...`);
-
-    const [frTranslation, zhTranslation, jaTranslation] = await Promise.all([
-      translateBlogPost(post, 'fr'),
-      translateBlogPost(post, 'zh'),
-      translateBlogPost(post, 'ja'),
-    ]);
-
-    const translations = {
-      fr: frTranslation || undefined,
-      zh: zhTranslation || undefined,
-      ja: jaTranslation || undefined,
-    };
-
-    const newPost: GeneratedPost = {
-      ...post,
-      translations,
-      generatedAt: new Date().toISOString(),
-    };
-
-    generatedPosts.unshift(newPost);
-    await saveGeneratedPosts(generatedPosts);
+    if (newPosts.length > 0) {
+      const allPosts = [...newPosts, ...generatedPosts];
+      await saveGeneratedPosts(allPosts);
+    }
 
     const today = new Date().toISOString().split('T')[0];
     const newLog: GenerationLog = {
       lastGeneratedAt: new Date().toISOString(),
       postsGeneratedToday:
-        log.lastGenerationDate === today ? log.postsGeneratedToday + 1 : 1,
+        log.lastGenerationDate === today
+          ? log.postsGeneratedToday + newPosts.length
+          : newPosts.length,
       lastGenerationDate: today,
+      cronBatchSize: log.cronBatchSize,
     };
     await saveGenerationLog(newLog);
 
     return NextResponse.json({
       success: true,
-      message: 'Blog post generated with translations!',
-      post: {
-        title: newPost.title,
-        excerpt: newPost.excerpt,
-        category: newPost.category,
-        tags: newPost.tags,
-        readTime: newPost.readTime,
-        slug: newPost.slug,
+      message: `Generated ${newPosts.length} blog post(s) with translations!`,
+      postsGenerated: newPosts.map((p) => ({
+        title: p.title,
+        excerpt: p.excerpt,
+        category: p.category,
+        tags: p.tags,
+        readTime: p.readTime,
+        slug: p.slug,
         languages: {
           en: true,
-          fr: !!frTranslation,
-          zh: !!zhTranslation,
-          ja: !!jaTranslation,
+          fr: !!p.translations?.fr,
+          zh: !!p.translations?.zh,
+          ja: !!p.translations?.ja,
         },
-      },
+      })),
       stats: {
-        totalPosts: generatedPosts.length,
+        totalPosts: generatedPosts.length + newPosts.length,
         postsGeneratedToday: newLog.postsGeneratedToday,
-        nextGenerationIn: '4 hours',
+        nextGenerationIn: 'tomorrow',
       },
     });
   } catch (err) {
@@ -323,7 +330,8 @@ export async function GET() {
       totalGeneratedPosts: generatedPosts.length,
       postsGeneratedToday: log.postsGeneratedToday,
       lastGeneratedAt: log.lastGeneratedAt,
-      nextGenerationIn: log.postsGeneratedToday >= 2 ? 'tomorrow' : '4 hours',
+      nextGenerationIn:
+        log.postsGeneratedToday >= log.cronBatchSize ? 'tomorrow' : 'now',
       posts: generatedPosts.slice(0, 5).map((p) => ({
         title: p.title,
         slug: p.slug,
