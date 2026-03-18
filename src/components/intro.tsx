@@ -59,7 +59,10 @@ export const Intro = () => {
         className="flex flex-row gap-2"
       >
         <Button asChild size="lg">
-          <Link href="/MOUIL PROSPER UPDATE 2026.pdf" target="_blank">
+          <Link
+            href="MOUIL PROSPER UPDATE 2026.pdf"
+            download="MOUIL_PROSPER_RESUME.pdf"
+          >
             {dict.hero.downloadResume}{' '}
             <Icons.download className="ml-2 size-4" />
           </Link>
@@ -92,7 +95,7 @@ export const Intro = () => {
           </Link>
         </Button>
       </motion.div>
-      <div className="mt-4 text-sm text-muted-foreground">
+      <div className="text-muted-foreground mt-4 text-sm">
         <span>{dict.hero.location}</span>
       </div>
     </section>
