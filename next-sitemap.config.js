@@ -1,8 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || '',
-  generateRobotsTxt: true,
+  siteUrl: process.env.SITE_URL || 'https://pepis.world',
+  generateRobotsTxt: false,
   generateIndexSitemap: false,
-  robotsTxtOptions: {
-    policies: [{ userAgent: '*', allow: '/' }],
-  },
 };

@@ -1,6 +1,7 @@
 export const ja = {
   nav: {
     home: 'ホーム',
+    blog: 'ブログ',
     services: 'サービス',
     about: '概要',
     experience: '経験',
@@ -142,5 +143,23 @@ export const ja = {
   },
   footer: {
     rights: '全著作権所有。',
+    blog: 'ブログ',
+  },
+  blog: {
+    title: 'ブログ',
+    subtitle:
+      'フルスタック開発、クラウドアーキテクチャ、テクノロジートレンドに関する洞察',
+    backToHome: 'ホームに戻る',
+    backToBlog: 'ブログに戻る',
+    readMore: '続きを読む',
+    minRead: '分で読了',
+    relatedArticles: '関連記事',
+    aboutAuthor: '著者について',
+    gotQuestions: 'ご質問はありますか？',
+    contactCta: 'お手伝いできて嬉しいです！ご連絡方法：',
+    readyToStart: 'プロジェクトの準備はできましたか？',
+    letsDiscuss: 'アイデアを実現する方法についてお話しましょう。',
+    getInTouch: 'お問い合わせ',
+    bookCall: '通話を予約',
   },
 };

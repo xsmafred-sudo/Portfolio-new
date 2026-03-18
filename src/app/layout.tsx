@@ -86,8 +86,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
     url: siteConfig.url,
     description: siteConfig.description,
     sameAs: [
-      'https://github.com/yourhandle',
-      'https://linkedin.com/in/mouil-prosper',
+      'https://github.com/Menendezpolo5',
+      'https://linkedin.com/in/prosper-merimee',
     ],
     knowsAbout: [
       'React',

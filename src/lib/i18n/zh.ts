@@ -1,6 +1,7 @@
 export const zh = {
   nav: {
     home: '首页',
+    blog: '博客',
     services: '服务',
     about: '关于',
     experience: '经验',
@@ -138,5 +139,22 @@ export const zh = {
   },
   footer: {
     rights: '版权所有。',
+    blog: '博客',
+  },
+  blog: {
+    title: '博客',
+    subtitle: '关于全栈开发、云架构和技术趋势的见解',
+    backToHome: '返回首页',
+    backToBlog: '返回博客',
+    readMore: '阅读更多',
+    minRead: '分钟阅读',
+    relatedArticles: '相关文章',
+    aboutAuthor: '关于作者',
+    gotQuestions: '有问题吗？',
+    contactCta: '我很乐意提供帮助！以下是联系方式：',
+    readyToStart: '准备好开始您的项目了吗？',
+    letsDiscuss: '让我们讨论如何帮助您实现想法。',
+    getInTouch: '联系我',
+    bookCall: '预约通话',
   },
 };

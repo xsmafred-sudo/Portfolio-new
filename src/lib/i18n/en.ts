@@ -1,6 +1,7 @@
 export const en = {
   nav: {
     home: 'Home',
+    blog: 'Blog',
     services: 'Services',
     about: 'About',
     experience: 'Experience',
@@ -139,6 +140,24 @@ export const en = {
   },
   footer: {
     rights: 'All rights reserved.',
+    blog: 'Blog',
+  },
+  blog: {
+    title: 'Blog',
+    subtitle:
+      'Insights on full-stack development, cloud architecture, and tech trends',
+    backToHome: 'Back to Home',
+    backToBlog: 'Back to Blog',
+    readMore: 'Read More',
+    minRead: 'min read',
+    relatedArticles: 'Related Articles',
+    aboutAuthor: 'About the Author',
+    gotQuestions: 'Have Questions?',
+    contactCta: "I'm always happy to help! Here's how you can reach me:",
+    readyToStart: 'Ready to Start Your Project?',
+    letsDiscuss: "Let's discuss how I can help bring your ideas to life.",
+    getInTouch: 'Get in Touch',
+    bookCall: 'Book a Call',
   },
 };
 

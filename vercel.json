@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/vercel.json",
+  "crons": [
+    {
+      "path": "/api/blog/auto-generate",
+      "schedule": "0 */4 * * *"
+    }
+  ]
+}

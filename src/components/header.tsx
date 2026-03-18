@@ -25,13 +25,14 @@ export const Header = () => {
   const dict = useDictionary();
 
   const navLinks = [
-    { name: dict.nav.home, hash: '#home' },
-    { name: dict.nav.services, hash: '#services' },
-    { name: dict.nav.about, hash: '#about' },
-    { name: dict.nav.experience, hash: '#experience' },
-    { name: dict.nav.projects, hash: '#projects' },
-    { name: dict.nav.github || 'GitHub', hash: '#github' },
-    { name: dict.nav.booking || 'Booking', hash: '#booking' },
+    { name: dict.nav.home, hash: '/' },
+    { name: dict.nav.services, hash: '/#services' },
+    { name: dict.nav.about, hash: '/#about' },
+    { name: dict.nav.experience, hash: '/#experience' },
+    { name: dict.nav.projects, hash: '/#projects' },
+    { name: dict.nav.blog, hash: '/blog' },
+    { name: dict.nav.github || 'GitHub', hash: '/#github' },
+    { name: dict.nav.booking || 'Booking', hash: '/#booking' },
   ] as const;
 
   return (
