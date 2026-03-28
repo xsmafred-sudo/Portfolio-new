@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 
 import { PropsWithChildren } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 
 import { ActiveSectionProvider } from '@/components/active-section-provider';
@@ -118,6 +119,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
             <Toaster position="bottom-left" />
           </ActiveSectionProvider>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
